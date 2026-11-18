@@ -1,0 +1,112 @@
+{
+  "pass": 19,
+  "fail": 0,
+  "notRun": 2,
+  "checks": [
+    {
+      "scenario": "integration strip and reused panels present",
+      "result": "PASS",
+      "detail": "{\"strip\":true,\"vocal\":true,\"recording\":true,\"exportBtn\":true,\"devices\":true}"
+    },
+    {
+      "scenario": "recording-to-mixing navigation (prepare → devices)",
+      "result": "PASS",
+      "detail": "{\"active\":true,\"devices\":true}"
+    },
+    {
+      "scenario": "input gain / monitoring / latency controls reachable",
+      "result": "PASS",
+      "detail": "{\"gain\":true,\"latency\":true,\"monitor\":true}"
+    },
+    {
+      "scenario": "vocal mix stage opens Mixer",
+      "result": "PASS",
+      "detail": "{\"mixerView\":true,\"mixerPanel\":true,\"meters\":\"true\",\"back\":true}"
+    },
+    {
+      "scenario": "mixer meter availability surfaced",
+      "result": "PASS",
+      "detail": "{\"mixerView\":true,\"mixerPanel\":true,\"meters\":\"true\",\"back\":true}"
+    },
+    {
+      "scenario": "mixer back to editor",
+      "result": "PASS",
+      "detail": "{\"editor\":true}"
+    },
+    {
+      "scenario": "export readiness reflects empty session",
+      "result": "PASS",
+      "detail": "{\"ready\":\"false\"}"
+    },
+    {
+      "scenario": "export gate surfaces actionable message",
+      "result": "PASS",
+      "detail": "{\"banner\":\"Nothing to export yet. Record or import audio first.\"}"
+    },
+    {
+      "scenario": "probe EngineHost started",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "recording offset uses active device profile",
+      "result": "PASS",
+      "detail": "{\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\nMicrophone (2- Realtek High Definition Audio)\\n48000\\n480\",\"devices\":\"Speakers (2- Realtek High Definition Audio) / Microphone (2- Realtek High Definition Audio)\"}"
+    },
+    {
+      "scenario": "offset profile selection persists across configure",
+      "result": "PASS",
+      "detail": "{\"offsetMs\":-12,\"offsetSamples\":-576,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\nMicrophone (2- Realtek High Definition Audio)\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"Microphone (2- Realtek High Definition Audio)\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"manual\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":null}"
+    },
+    {
+      "scenario": "monitoring state reflects engine",
+      "result": "PASS",
+      "detail": "{\"transport\":\"stopped\",\"position\":0,\"duration\":0,\"renderTail\":{\"enabled\":true,\"maxSeconds\":10,\"thresholdDb\":-90},\"sampleRate\":48000,\"bufferSize\":480,\"masterGain\":1,\"inputGainDb\":0,\"monitor\":true,\"deviceOpen\":true,\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"Microphone (2- Realtek High Definition Audio)\",\"inputChannels\":2,\"outputChannels\":2,\"reportedLatencyMs\":10,\"deviceError\":\"\",\"canUndo\":false,\"canRedo\":false,\"tracks\":[],\"vocalPresets\":[{\"id\":\"factory-clean-vocal\",\"name\":\"Clean Vocal\",\"factory\":true,\"effects\":[{\"type\":\"gate\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true}]},{\"id\":\"factory-warm-vocal\",\"name\":\"Warm Vocal\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-bright-vocal\",\"name\":\"Bright Vocal\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-soft-ballad\",\"name\":\"Soft Ballad\",\"factory\":true,\"effects\":[{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true},{\"type\":\"reverb\",\"enabled\":true}]},{\"id\":\"factory-podcast-voice\",\"name\":\"Podcast Voice\",\"factory\":true,\"effects\":[{\"type\":\"gate\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-vocal-reverb\",\"name\":\"Vocal Reverb\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"reverb\",\"enabled\":true}]}],\"masterEffects\":[],\"masterAutomation\":[],\"buses\":[],\"record\":{\"state\":\"idle\",\"folder\":\"C:\\\\Users\\\\hello\\\\Documents\\\\Music Studio Pro\\\\Recordings\",\"startSeconds\":0,\"elapsedSeconds\":0,\"droppedFrames\":0,\"maxSeconds\":1800,\"virtualInput\":{\"enabled\":false,\"frequency\":440,\"level\":0.5},\"lastTake\":null,\"latency\":{\"offsetMs\":0,\"offsetSamples\":0,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\nMicrophone (2- Realtek High Definition Audio)\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"Microphone (2- Realtek High Definition Audio)\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"none\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":null}},\"pitch\":{\"processedFolder\":\"C:\\\\Users\\\\hello\\\\Documents\\\\Music Studio Pro\\\\Processed\",\"preview\":null,\"mapping\":{\"enabled\":false,\"root\":\"C\",\"scale\":\"major\",\"scaleLabel\":\"Major\",\"tieBreak\":\"lower\",\"toleranceCents\":10,\"pitchClasses\":[0,2,4,5,7,9,11]}},\"vocalWorkflow\":{\"order\":[\"record\",\"comp\",\"timing\",\"breath\",\"pitch\",\"presets\",\"mix\"],\"previews\":{\"pitch\":false,\"breath\":false,\"preset\":false},\"liveAutoTuneInExport\":false,\"note\":\"Processing order: source â comp â timing â breath â offline pitch â clip gain/fades â track FX/presets â mix/export. Live Auto-Tune is monitor/record only and is not exported.\"}}"
+    },
+    {
+      "scenario": "input gain state synchronization",
+      "result": "PASS",
+      "detail": "{\"transport\":\"stopped\",\"position\":0,\"duration\":0,\"renderTail\":{\"enabled\":true,\"maxSeconds\":10,\"thresholdDb\":-90},\"sampleRate\":48000,\"bufferSize\":480,\"masterGain\":1,\"inputGainDb\":-3,\"monitor\":false,\"deviceOpen\":true,\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"Microphone (2- Realtek High Definition Audio)\",\"inputChannels\":2,\"outputChannels\":2,\"reportedLatencyMs\":10,\"deviceError\":\"\",\"canUndo\":false,\"canRedo\":false,\"tracks\":[],\"vocalPresets\":[{\"id\":\"factory-clean-vocal\",\"name\":\"Clean Vocal\",\"factory\":true,\"effects\":[{\"type\":\"gate\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true}]},{\"id\":\"factory-warm-vocal\",\"name\":\"Warm Vocal\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-bright-vocal\",\"name\":\"Bright Vocal\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-soft-ballad\",\"name\":\"Soft Ballad\",\"factory\":true,\"effects\":[{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true},{\"type\":\"reverb\",\"enabled\":true}]},{\"id\":\"factory-podcast-voice\",\"name\":\"Podcast Voice\",\"factory\":true,\"effects\":[{\"type\":\"gate\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-vocal-reverb\",\"name\":\"Vocal Reverb\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"reverb\",\"enabled\":true}]}],\"masterEffects\":[],\"masterAutomation\":[],\"buses\":[],\"record\":{\"state\":\"idle\",\"folder\":\"C:\\\\Users\\\\hello\\\\Documents\\\\Music Studio Pro\\\\Recordings\",\"startSeconds\":0,\"elapsedSeconds\":0,\"droppedFrames\":0,\"maxSeconds\":1800,\"virtualInput\":{\"enabled\":false,\"frequency\":440,\"level\":0.5},\"lastTake\":null,\"latency\":{\"offsetMs\":0,\"offsetSamples\":0,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\nMicrophone (2- Realtek High Definition Audio)\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"Microphone (2- Realtek High Definition Audio)\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"none\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":null}},\"pitch\":{\"processedFolder\":\"C:\\\\Users\\\\hello\\\\Documents\\\\Music Studio Pro\\\\Processed\",\"preview\":null,\"mapping\":{\"enabled\":false,\"root\":\"C\",\"scale\":\"major\",\"scaleLabel\":\"Major\",\"tieBreak\":\"lower\",\"toleranceCents\":10,\"pitchClasses\":[0,2,4,5,7,9,11]}},\"vocalWorkflow\":{\"order\":[\"record\",\"comp\",\"timing\",\"breath\",\"pitch\",\"presets\",\"mix\"],\"previews\":{\"pitch\":false,\"breath\":false,\"preset\":false},\"liveAutoTuneInExport\":false,\"note\":\"Processing order: source â comp â timing â breath â offline pitch â clip gain/fades â track FX/presets â mix/export. Live Auto-Tune is monitor/record only and is not exported.\"}}"
+    },
+    {
+      "scenario": "take/clip selection remains valid after import",
+      "result": "PASS",
+      "detail": "clip-1"
+    },
+    {
+      "scenario": "engine disconnect handled without EPIPE",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "engine reconnect (new host) succeeds",
+      "result": "PASS",
+      "detail": "ping ok"
+    },
+    {
+      "scenario": "karaoke view still available",
+      "result": "PASS",
+      "detail": "{\"panel\":true}"
+    },
+    {
+      "scenario": "karaoke-to-studio navigation where affected",
+      "result": "PASS",
+      "detail": "{\"editor\":true,\"strip\":true,\"vocalId\":\"track-1\"}"
+    },
+    {
+      "scenario": "no renderer console errors",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    },
+    {
+      "scenario": "physical loopback",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "pass": 13,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "clip imported for breath",
+      "result": "PASS",
+      "detail": "clip-1"
+    },
+    {
+      "scenario": "Breath Edit mode toggles on",
+      "result": "PASS",
+      "detail": "on"
+    },
+    {
+      "scenario": "Analyze creates regions",
+      "result": "PASS",
+      "detail": "regions=4"
+    },
+    {
+      "scenario": "ignore region",
+      "result": "PASS",
+      "detail": "ignored=true"
+    },
+    {
+      "scenario": "manual region add",
+      "result": "PASS",
+      "detail": "regions=1"
+    },
+    {
+      "scenario": "boundary/gain/fade update",
+      "result": "PASS",
+      "detail": "gain=-12 start=0.52"
+    },
+    {
+      "scenario": "Preview breath",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "Apply breath",
+      "result": "PASS",
+      "detail": "applied"
+    },
+    {
+      "scenario": "Breath mode does not move clip start",
+      "result": "PASS",
+      "detail": "start=0"
+    },
+    {
+      "scenario": "Revert breath",
+      "result": "PASS",
+      "detail": "cleared"
+    },
+    {
+      "scenario": "save/reopen keeps regions",
+      "result": "PASS",
+      "detail": "regions=1"
+    },
+    {
+      "scenario": "source WAV protected",
+      "result": "PASS",
+      "detail": "unchanged"
+    },
+    {
+      "scenario": "breath controls present in UI",
+      "result": "PASS",
+      "detail": "{\"breath\":true,\"analyze\":true}"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

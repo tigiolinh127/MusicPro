@@ -1,0 +1,16 @@
+{
+  "format": "music-studio-pro-project",
+  "version": 6,
+  "masterGain": 0.5,
+  "monitorEnabled": false,
+  "sampleRate": 48000,
+  "bufferSize": 512,
+  "outputDevice": "",
+  "inputDevice": "",
+  "projectId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+  "projectName": "Alpha",
+  "tracks": [],
+  "buses": [],
+  "masterEffects": [],
+  "masterAutomation": []
+}

@@ -1,0 +1,123 @@
+{
+  "pass": 22,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "resolve index.html",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\karaoke-k11-screenshots\\fake-renderer\\index.html"
+    },
+    {
+      "scenario": "resolve nested asset",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\karaoke-k11-screenshots\\fake-renderer\\app.js"
+    },
+    {
+      "scenario": "reject path traversal",
+      "result": "PASS",
+      "detail": "blocked"
+    },
+    {
+      "scenario": "reject missing file",
+      "result": "PASS",
+      "detail": "missing"
+    },
+    {
+      "scenario": "local server serves index",
+      "result": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "scenario": "local server sets nosniff",
+      "result": "PASS",
+      "detail": "nosniff"
+    },
+    {
+      "scenario": "local server denies framing",
+      "result": "PASS",
+      "detail": "DENY"
+    },
+    {
+      "scenario": "local server rejects bad Host",
+      "result": "PASS",
+      "detail": "status=403"
+    },
+    {
+      "scenario": "error 153 maps to unavailable",
+      "result": "PASS",
+      "detail": "YouTube rejected the embed (error 153 — missing/invalid embedder identity). Use an http(s) app origin, or open the video externally."
+    },
+    {
+      "scenario": "error 101 maps to unavailable",
+      "result": "PASS",
+      "detail": "This video is unavailable or embedding is disabled by the owner (YouTube error 101)."
+    },
+    {
+      "scenario": "error 2 maps to invalid id",
+      "result": "PASS",
+      "detail": "Invalid YouTube video id (YouTube error 2)."
+    },
+    {
+      "scenario": "appOrigin is http 127.0.0.1",
+      "result": "PASS",
+      "detail": "http://127.0.0.1:50552"
+    },
+    {
+      "scenario": "renderer document uses http origin",
+      "result": "PASS",
+      "detail": "{\"origin\":\"http://127.0.0.1:50552\",\"protocol\":\"http:\",\"href\":\"http://127.0.0.1:50552/\"}"
+    },
+    {
+      "scenario": "renderer is not file://",
+      "result": "PASS",
+      "detail": "http:"
+    },
+    {
+      "scenario": "Karaoke UI shows open-external control",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"openExternal\":true,\"originLabel\":\"App origin: http://127.0.0.1:50552\"}"
+    },
+    {
+      "scenario": "Karaoke UI shows app origin",
+      "result": "PASS",
+      "detail": "App origin: http://127.0.0.1:50552"
+    },
+    {
+      "scenario": "player initialization reaches terminal/handled state",
+      "result": "PASS",
+      "detail": "ready | Video ready — Player ready (origin http://127.0.0.1:50552)."
+    },
+    {
+      "scenario": "iframe uses youtube embed host",
+      "result": "PASS",
+      "detail": "https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A50552&widget_referrer=http%3A%2F%2F127.0.0.1%3A50552&rel=0&modestbranding=1&playsinline=1"
+    },
+    {
+      "scenario": "no Error 153 under http origin",
+      "result": "PASS",
+      "detail": "Video ready — Player ready (origin http://127.0.0.1:50552)."
+    },
+    {
+      "scenario": "real YouTube playback path (ready/playing)",
+      "result": "PASS",
+      "detail": "ready | Video ready — Player ready (origin http://127.0.0.1:50552)."
+    },
+    {
+      "scenario": "embed error banner when not playable",
+      "result": "PASS",
+      "detail": "player ready — banner not required"
+    },
+    {
+      "scenario": "player cleanup on clear",
+      "result": "PASS",
+      "detail": "{\"status\":\"idle\",\"hostEmpty\":true}"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ],
+  "appOrigin": "http://127.0.0.1:50552"
+}

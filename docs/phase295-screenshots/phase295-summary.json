@@ -1,0 +1,217 @@
+{
+  "pass": 40,
+  "fail": 0,
+  "not_run": 2,
+  "checks": [
+    {
+      "scenario": "dirty map: importTrack mutates",
+      "result": "PASS",
+      "detail": "{\"available\":true,\"importTrack\":true,\"setTrack\":true,\"setClipFades\":true,\"setMaster\":true,\"setSend\":true,\"duplicateClip\":true,\"relinkMedia\":true,\"recordStop\":true,\"recordStart\":false,\"transport\":false,\"previewBreath\":false}"
+    },
+    {
+      "scenario": "dirty map: setTrack mutates",
+      "result": "PASS",
+      "detail": "setTrack"
+    },
+    {
+      "scenario": "dirty map: setClipFades mutates",
+      "result": "PASS",
+      "detail": "setClipFades"
+    },
+    {
+      "scenario": "dirty map: setMaster mutates",
+      "result": "PASS",
+      "detail": "setMaster"
+    },
+    {
+      "scenario": "dirty map: setSend mutates",
+      "result": "PASS",
+      "detail": "setSend"
+    },
+    {
+      "scenario": "dirty map: duplicateClip mutates",
+      "result": "PASS",
+      "detail": "duplicateClip"
+    },
+    {
+      "scenario": "dirty map: relinkMedia mutates",
+      "result": "PASS",
+      "detail": "relinkMedia"
+    },
+    {
+      "scenario": "dirty map: record stop mutates",
+      "result": "PASS",
+      "detail": "record stop"
+    },
+    {
+      "scenario": "dirty map: record start does not",
+      "result": "PASS",
+      "detail": "record start"
+    },
+    {
+      "scenario": "dirty map: transport does not",
+      "result": "PASS",
+      "detail": "transport"
+    },
+    {
+      "scenario": "dirty map: previewBreath does not",
+      "result": "PASS",
+      "detail": "previewBreath"
+    },
+    {
+      "scenario": "dirty map exposed to renderer",
+      "result": "PASS",
+      "detail": " __msp295.isMutatingOp"
+    },
+    {
+      "scenario": "dirty map: saveCustomVocalPreset mutates",
+      "result": "PASS",
+      "detail": "{\"available\":true,\"saveCustom\":true,\"setNoteTarget\":true,\"cancelStretchPreview\":true}"
+    },
+    {
+      "scenario": "dirty map: setNoteTarget mutates",
+      "result": "PASS",
+      "detail": "setNoteTarget"
+    },
+    {
+      "scenario": "dirty map: cancelClipStretchPreview does not",
+      "result": "PASS",
+      "detail": "cancel preview"
+    },
+    {
+      "scenario": "engine available",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "scenario A import marks dirty (via App mapping)",
+      "result": "PASS",
+      "detail": "{\"ok\":true,\"dirty\":true,\"gen\":1,\"pathOk\":true}"
+    },
+    {
+      "scenario": "scenario A save succeeds",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase295-screenshots\\scenario-a\\song.msp.json"
+    },
+    {
+      "scenario": "scenario A dirty clears only after successful save",
+      "result": "PASS",
+      "detail": "{\"dirty\":false}"
+    },
+    {
+      "scenario": "scenario A save as preserves media refs",
+      "result": "PASS",
+      "detail": "[{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase295-screenshots\\\\media\\\\tone295.wav\",\"clips\":1}]"
+    },
+    {
+      "scenario": "scenario A reopen restores timeline",
+      "result": "PASS",
+      "detail": "{\"name\":\"295 A Saved\",\"clips\":1,\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase295-screenshots\\\\media\\\\tone295.wav\"}"
+    },
+    {
+      "scenario": "scenario B autosave captures state without clearing dirty",
+      "result": "PASS",
+      "detail": "{\"snapSize\":1191,\"wavSize\":288044,\"stillDirty\":true}"
+    },
+    {
+      "scenario": "scenario B original project unchanged by autosave",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase295-screenshots\\scenario-a\\song.msp.json"
+    },
+    {
+      "scenario": "scenario C clip move updates project state",
+      "result": "PASS",
+      "detail": "{\"beforeMove\":0.25,\"after\":0.75}"
+    },
+    {
+      "scenario": "scenario C undo restores clip without stale media id",
+      "result": "PASS",
+      "detail": "{\"id\":\"clip-1\",\"sourceFileId\":\"track-1-src\",\"timelineStart\":0.25,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":12000,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1}"
+    },
+    {
+      "scenario": "scenario C keyboard routes same command ids",
+      "result": "PASS",
+      "detail": "{\"matchSplit\":\"timeline.split\",\"matchSave\":\"project.save\"}"
+    },
+    {
+      "scenario": "scenario C fit project works",
+      "result": "PASS",
+      "detail": "{\"dirty\":true,\"dirtyGeneration\":4,\"pixelsPerSecond\":172,\"snap\":true,\"laneHeight\":164,\"bpm\":120,\"selectedCount\":1,\"selected\":{\"trackId\":\"track-1\",\"clipId\":\"clip-1\"},\"position\":0,\"arrangementEnd\":1.75}"
+    },
+    {
+      "scenario": "scenario C selection cleared on project UI reset",
+      "result": "PASS",
+      "detail": "{\"dirty\":true,\"dirtyGeneration\":4,\"path\":null,\"name\":\"295 Auto\",\"projectId\":\"c1feeb30-3adb-485b-9118-1c66fd12647f\",\"transport\":\"stopped\",\"recording\":false,\"selectedCount\":0,\"missingDialogOpen\":false,\"mediaPanelOpen\":false,\"missingCount\":0,\"switchToken\":0}"
+    },
+    {
+      "scenario": "scenario D missing recovery dialog opens",
+      "result": "PASS",
+      "detail": "dialog"
+    },
+    {
+      "scenario": "scenario D decide later keeps missing + clips",
+      "result": "PASS",
+      "detail": "[{\"id\":\"clip-3\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1}]"
+    },
+    {
+      "scenario": "scenario D relink preserves editing metadata",
+      "result": "PASS",
+      "detail": "{\"relOk\":true,\"missing\":false,\"clips\":[{\"id\":\"clip-3\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1}],\"clipSnap\":[{\"timelineStart\":0,\"duration\":1,\"gain\":1}]}"
+    },
+    {
+      "scenario": "scenario D save+reopen recovered media",
+      "result": "PASS",
+      "detail": "[{\"id\":\"track-2\",\"name\":\"Ext\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase295-screenshots\\\\media\\\\tone295-alt.wav\",\"gain\":1,\"pan\":0,\"mute\":false,\"solo\":false,\"duration\":1,\"sourceSampleRate\":48000,\"channels\":2,\"missing\":false,\"error\":\"\",\"sources\":[{\"id\":\"track-2-src\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase295-screenshots\\\\media\\\\tone295-alt.wav\",\"kind\":\"primary\",\"missing\":false,\"error\":\"\",\"sampleRate\":48000,\"channels\":2,\"duration\":1}],\"clips\":[{\"id\":\"clip-3\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1}],\"output\":\"master\",\"sends\":[],\"effects\":[],\"automation\":[],\"armed\":false,\"recordInput\":\"1\",\"recordMode\":\"dry\",\"monitorInput\":false,\"takesExpanded\":false,\"compCrossfadeMs\":5,\"autoCrossfadeEnabled\":false,\"autoCrossfadeMs\":20,\"autoCrossfadeCurve\":\"linear\",\"takes\":[]}]"
+    },
+    {
+      "scenario": "scenario D failed load keeps active project",
+      "result": "PASS",
+      "detail": "{\"failed\":\"Project file is not valid JSON.\",\"beforeName\":\"295 D Recovered\",\"afterName\":\"295 D Recovered\"}"
+    },
+    {
+      "scenario": "scenario E project switch stops stale transport",
+      "result": "PASS",
+      "detail": "{\"playing\":\"playing\",\"afterSwitch\":{\"transport\":\"stopped\",\"position\":0,\"duration\":1,\"renderTail\":{\"enabled\":true,\"maxSeconds\":10,\"thresholdDb\":-90},\"sampleRate\":48000,\"bufferSize\":480,\"masterGain\":1,\"inputGainDb\":0,\"monitor\":false,\"deviceOpen\":true,\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"\",\"inputChannels\":0,\"outputChannels\":2,\"reportedLatencyMs\":10,\"deviceError\":\"\",\"canUndo\":true,\"canRedo\":false,\"projectId\":\"529882be-095e-4d65-8545-a94a367388f6\",\"projectName\":\"295 D Recovered\",\"tracks\":[{\"id\":\"track-2\",\"name\":\"Ext\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase295-screenshots\\\\media\\\\tone295-alt.wav\",\"gain\":1,\"pan\":0,\"mute\":false,\"solo\":false,\"duration\":1,\"sourceSampleRate\":48000,\"channels\":2,\"missing\":false,\"error\":\"\",\"sources\":[{\"id\":\"track-2-src\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase295-screenshots\\\\media\\\\tone295-alt.wav\",\"kind\":\"primary\",\"missing\":false,\"error\":\"\",\"sampleRate\":48000,\"channels\":2,\"duration\":1}],\"clips\":[{\"id\":\"clip-3\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1}],\"output\":\"master\",\"sends\":[],\"effects\":[],\"automation\":[],\"armed\":false,\"recordInput\":\"1\",\"recordMode\":\"dry\",\"monitorInput\":false,\"takesExpanded\":false,\"compCrossfadeMs\":5,\"autoCrossfadeEnabled\":false,\"autoCrossfadeMs\":20,\"autoCrossfadeCurve\":\"linear\",\"takes\":[]}],\"vocalPresets\":[{\"id\":\"factory-clean-vocal\",\"name\":\"Clean Vocal\",\"factory\":true,\"effects\":[{\"type\":\"gate\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true}]},{\"id\":\"factory-warm-vocal\",\"name\":\"Warm Vocal\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-bright-vocal\",\"name\":\"Bright Vocal\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-soft-ballad\",\"name\":\"Soft Ballad\",\"factory\":true,\"effects\":[{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true},{\"type\":\"reverb\",\"enabled\":true}]},{\"id\":\"factory-podcast-voice\",\"name\":\"Podcast Voice\",\"factory\":true,\"effects\":[{\"type\":\"gate\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-vocal-reverb\",\"name\":\"Vocal Reverb\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"reverb\",\"enabled\":true}]}],\"masterEffects\":[],\"masterAutomation\":[],\"buses\":[],\"record\":{\"state\":\"idle\",\"folder\":\"C:\\\\Users\\\\hello\\\\Documents\\\\Music Studio Pro\\\\Recordings\",\"startSeconds\":0,\"elapsedSeconds\":0,\"droppedFrames\":0,\"maxSeconds\":1800,\"virtualInput\":{\"enabled\":false,\"frequency\":440,\"level\":0.5},\"lastTake\":null,\"latency\":{\"offsetMs\":-12,\"offsetSamples\":-576,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\n\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"none\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":null}},\"pitch\":{\"processedFolder\":\"C:\\\\Users\\\\hello\\\\Documents\\\\Music Studio Pro\\\\Processed\",\"preview\":null,\"mapping\":{\"enabled\":false,\"root\":\"C\",\"scale\":\"major\",\"scaleLabel\":\"Major\",\"tieBreak\":\"lower\",\"toleranceCents\":10,\"pitchClasses\":[0,2,4,5,7,9,11]}},\"vocalWorkflow\":{\"order\":[\"record\",\"comp\",\"timing\",\"breath\",\"pitch\",\"presets\",\"mix\"],\"previews\":{\"pitch\":false,\"breath\":false,\"preset\":false},\"liveAutoTuneInExport\":false,\"note\":\"Processing order: source â comp â timing â breath â offline pitch â clip gain/fades â track FX/presets â mix/export. Live Auto-Tune is monitor/record only and is not exported.\"}}}"
+    },
+    {
+      "scenario": "scenario E UI selection cleared after switch reset",
+      "result": "PASS",
+      "detail": "{\"dirty\":true,\"dirtyGeneration\":5,\"path\":null,\"name\":\"295 D Recovered\",\"projectId\":\"529882be-095e-4d65-8545-a94a367388f6\",\"transport\":\"stopped\",\"recording\":false,\"selectedCount\":0,\"missingDialogOpen\":false,\"mediaPanelOpen\":false,\"missingCount\":0,\"switchToken\":0}"
+    },
+    {
+      "scenario": "scenario E open increments switch token (stale guard)",
+      "result": "PASS",
+      "detail": "{\"tokenBefore\":0,\"openTok\":{\"ok\":true,\"token\":1}}"
+    },
+    {
+      "scenario": "integrated chrome: project bar + media + shortcuts",
+      "result": "PASS",
+      "detail": "{\"bar\":true,\"mediaBtn\":true,\"shortcutBtn\":true}"
+    },
+    {
+      "scenario": "media panel opens with project context",
+      "result": "PASS",
+      "detail": "panel"
+    },
+    {
+      "scenario": "shortcuts blocked while media panel open",
+      "result": "PASS",
+      "detail": "keydown guard"
+    },
+    {
+      "scenario": "microphone / recording hardware switch",
+      "result": "NOT RUN",
+      "detail": "NO HARDWARE"
+    },
+    {
+      "scenario": "manual crash kill recovery",
+      "result": "NOT RUN",
+      "detail": "destructive crash test not performed"
+    },
+    {
+      "scenario": "renderer console clean",
+      "result": "PASS",
+      "detail": "no errors"
+    }
+  ]
+}

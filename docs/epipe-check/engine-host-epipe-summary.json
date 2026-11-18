@@ -1,0 +1,57 @@
+{
+  "pass": 9,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "engine executable present",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\build\\MusicStudioEngine.exe"
+    },
+    {
+      "scenario": "EngineHost started",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "ping before close",
+      "result": "PASS",
+      "detail": "{\"v\":1,\"id\":\"ui-1\",\"ok\":true,\"result\":{\"pong\":true}}"
+    },
+    {
+      "scenario": "request after child death rejects cleanly",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "rejected message is not raw EPIPE",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "repeated request after death stays safe",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "shutdown after death is safe",
+      "result": "PASS",
+      "detail": "returned"
+    },
+    {
+      "scenario": "request after graceful shutdown rejects without EPIPE",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "no uncaughtException / unhandledRejection",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

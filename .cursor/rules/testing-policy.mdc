@@ -1,0 +1,37 @@
+---
+description: Mandatory testing policy for Music Studio Pro - targeted tests only, no full regression without explicit approval
+alwaysApply: true
+---
+
+# Testing policy (mandatory, all phases, until the user changes it)
+
+Feature development first. Verify only what changed.
+
+## Scope
+- Test only the functionality being developed, modified or fixed.
+- Do not run unrelated native tests or GUI checks.
+- Never run full regression (`scripts\run-regression.ps1`, or every native test plus every GUI check) without explicit user approval. Do not run it automatically at the end of a phase.
+- If broader testing seems necessary, explain why and ask the user before running it.
+
+## Smallest necessary build
+- Renderer/Electron-only change: TypeScript check for the touched project (`npx tsc -p tsconfig.json --noEmit` or `tsconfig.electron.json`) and `npm run build` only if the change must run in the app. No native rebuild.
+- Native change: `scripts\build-engine.ps1`, then only the native tests that cover the change. Before rebuilding, check for a running Music Studio Pro window; ask the user to close it, never force-close it.
+- GUI verification: run only the one relevant check and phase (for example `MSP_AUTO_CHECK` build), not the other GUI checks.
+
+## Reporting
+- List exactly which commands and tests were executed, with their results.
+- Mark every test that was not executed as NOT RUN. Never claim an unexecuted test passed.
+- Microphone tests are always: NOT RUN — NO HARDWARE.
+
+## Preservation
+- Preserve all existing tests and functionality; do not delete or weaken tests to make a change pass.
+- Do not build installers or release packages.
+
+## Example report
+```
+Executed:
+- npx tsc -p tsconfig.json --noEmit: exit 0
+- auto-build GUI check: 16 PASS, 0 FAIL
+Not run: full regression, other GUI checks, native tests (no native change)
+Microphone: NOT RUN — NO HARDWARE
+```

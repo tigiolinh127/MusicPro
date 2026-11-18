@@ -1,0 +1,16 @@
+{
+  "format": "music-studio-pro-project",
+  "version": 99,
+  "masterGain": 1,
+  "monitorEnabled": false,
+  "sampleRate": 48000,
+  "bufferSize": 512,
+  "outputDevice": "",
+  "inputDevice": "",
+  "projectId": "11111111-1111-1111-1111-111111111111",
+  "projectName": "Phase291",
+  "tracks": [],
+  "buses": [],
+  "masterEffects": [],
+  "masterAutomation": []
+}

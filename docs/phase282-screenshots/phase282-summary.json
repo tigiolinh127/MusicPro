@@ -1,0 +1,82 @@
+{
+  "pass": 14,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "two overlapping clips imported",
+      "result": "PASS",
+      "detail": "[{\"id\":\"clip-2\",\"start\":0,\"dur\":1},{\"id\":\"clip-3\",\"start\":0.9,\"dur\":1}]"
+    },
+    {
+      "scenario": "crossfade inspector controls present",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"duration\":true,\"preview\":true,\"apply\":true,\"auto\":true}"
+    },
+    {
+      "scenario": "preview sets complementary fades",
+      "result": "PASS",
+      "detail": "{\"left\":{\"id\":\"clip-2\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0.05,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":2400,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"equalPower\",\"crossfadePartnerId\":\"clip-3\",\"crossfadeCurve\":\"equalPower\",\"crossfadeDuration\":0.05,\"crossfadeDurationSamples\":2400,\"gain\":1},\"right\":{\"id\":\"clip-3\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0.9,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0.05,\"fadeOut\":0,\"timelineStartSamples\":43200,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":2400,\"fadeOutSamples\":0,\"fadeInCurve\":\"equalPower\",\"fadeOutCurve\":\"linear\",\"crossfadePartnerId\":\"clip-2\",\"crossfadeCurve\":\"equalPower\",\"crossfadeDuration\":0.05,\"crossfadeDurationSamples\":2400,\"gain\":1}}"
+    },
+    {
+      "scenario": "cancel preview restores fades",
+      "result": "PASS",
+      "detail": "{\"left\":0,\"right\":0}"
+    },
+    {
+      "scenario": "apply links clips with sCurve",
+      "result": "PASS",
+      "detail": "{\"left\":{\"id\":\"clip-2\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0.04,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":1920,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"sCurve\",\"crossfadePartnerId\":\"clip-3\",\"crossfadeCurve\":\"sCurve\",\"crossfadeDuration\":0.04,\"crossfadeDurationSamples\":1920,\"gain\":1},\"right\":{\"id\":\"clip-3\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0.9,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0.04,\"fadeOut\":0,\"timelineStartSamples\":43200,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":1920,\"fadeOutSamples\":0,\"fadeInCurve\":\"sCurve\",\"fadeOutCurve\":\"linear\",\"crossfadePartnerId\":\"clip-2\",\"crossfadeCurve\":\"sCurve\",\"crossfadeDuration\":0.04,\"crossfadeDurationSamples\":1920,\"gain\":1}}"
+    },
+    {
+      "scenario": "undo restores prior fade state",
+      "result": "PASS",
+      "detail": "[{\"fadeOut\":0,\"fadeIn\":0},{\"fadeOut\":0,\"fadeIn\":0}]"
+    },
+    {
+      "scenario": "redo restores crossfade link",
+      "result": "PASS",
+      "detail": "{\"id\":\"clip-2\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0.04,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":1920,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"sCurve\",\"crossfadePartnerId\":\"clip-3\",\"crossfadeCurve\":\"sCurve\",\"crossfadeDuration\":0.04,\"crossfadeDurationSamples\":1920,\"gain\":1}"
+    },
+    {
+      "scenario": "auto-crossfade settings persist in state",
+      "result": "PASS",
+      "detail": "{\"id\":\"track-2\",\"name\":\"Crossfade 282\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase282-screenshots\\\\phase282-tone.wav\",\"gain\":1,\"pan\":0,\"mute\":false,\"solo\":false,\"duration\":1,\"sourceSampleRate\":48000,\"channels\":2,\"missing\":false,\"error\":\"\",\"clips\":[{\"id\":\"clip-2\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0.04,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":1920,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"sCurve\",\"crossfadePartnerId\":\"clip-3\",\"crossfadeCurve\":\"sCurve\",\"crossfadeDuration\":0.04,\"crossfadeDurationSamples\":1920,\"gain\":1},{\"id\":\"clip-3\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0.9,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0.04,\"fadeOut\":0,\"timelineStartSamples\":43200,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":1920,\"fadeOutSamples\":0,\"fadeInCurve\":\"sCurve\",\"fadeOutCurve\":\"linear\",\"crossfadePartnerId\":\"clip-2\",\"crossfadeCurve\":\"sCurve\",\"crossfadeDuration\":0.04,\"crossfadeDurationSamples\":1920,\"gain\":1}],\"output\":\"master\",\"sends\":[],\"effects\":[],\"automation\":[],\"armed\":false,\"recordInput\":\"1\",\"recordMode\":\"dry\",\"monitorInput\":false,\"takesExpanded\":false,\"compCrossfadeMs\":5,\"autoCrossfadeEnabled\":true,\"autoCrossfadeMs\":25,\"autoCrossfadeCurve\":\"linear\",\"takes\":[]}"
+    },
+    {
+      "scenario": "auto-crossfade on move",
+      "result": "PASS",
+      "detail": "{\"left\":0.025,\"right\":0.025,\"partner\":\"clip-3\"}"
+    },
+    {
+      "scenario": "revert clears crossfade",
+      "result": "PASS",
+      "detail": "[{\"fadeIn\":0,\"fadeOut\":0},{\"fadeIn\":0,\"fadeOut\":0}]"
+    },
+    {
+      "scenario": "rejects non-overlapping pair",
+      "result": "PASS",
+      "detail": "Those clips do not touch or overlap — move them together before crossfading."
+    },
+    {
+      "scenario": "save/load restores crossfade + auto settings",
+      "result": "PASS",
+      "detail": "{\"auto\":true,\"ms\":30,\"clips\":[{\"id\":\"clip-2\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0.03,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":1440,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"equalPower\",\"crossfadePartnerId\":\"clip-3\",\"crossfadeCurve\":\"equalPower\",\"crossfadeDuration\":0.03,\"crossfadeDurationSamples\":1440,\"gain\":1},{\"id\":\"clip-3\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0.9,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0.03,\"fadeOut\":0,\"timelineStartSamples\":43200,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":1440,\"fadeOutSamples\":0,\"fadeInCurve\":\"equalPower\",\"fadeOutCurve\":\"linear\",\"crossfadePartnerId\":\"clip-2\",\"crossfadeCurve\":\"equalPower\",\"crossfadeDuration\":0.03,\"crossfadeDurationSamples\":1440,\"gain\":1}]}"
+    },
+    {
+      "scenario": "export with crossfade succeeds",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase282-screenshots\\phase282-export.wav"
+    },
+    {
+      "scenario": "no renderer console errors",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "pass": 10,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "clip imported",
+      "result": "PASS",
+      "detail": "clips=1"
+    },
+    {
+      "scenario": "vocalWorkflow in getState",
+      "result": "PASS",
+      "detail": "{\"order\":7,\"live\":false}"
+    },
+    {
+      "scenario": "multi-take with comp clip",
+      "result": "PASS",
+      "detail": "takes=1"
+    },
+    {
+      "scenario": "preset after analysis stages",
+      "result": "PASS",
+      "detail": "factory-clean-vocal"
+    },
+    {
+      "scenario": "preset preview flagged",
+      "result": "PASS",
+      "detail": "{\"pitch\":false,\"breath\":false,\"preset\":true,\"presetTrackId\":\"track-1\"}"
+    },
+    {
+      "scenario": "export succeeds with preview ended",
+      "result": "PASS",
+      "detail": "ended"
+    },
+    {
+      "scenario": "save/reopen keeps preset + clips",
+      "result": "PASS",
+      "detail": "factory-clean-vocal"
+    },
+    {
+      "scenario": "source WAV protected",
+      "result": "PASS",
+      "detail": "unchanged"
+    },
+    {
+      "scenario": "Vocal Workflow UI present",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"stages\":7,\"timing\":true,\"mix\":true}"
+    },
+    {
+      "scenario": "stage navigation selects presets",
+      "result": "PASS",
+      "detail": "{\"selected\":true}"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

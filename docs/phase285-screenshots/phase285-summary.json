@@ -1,0 +1,77 @@
+{
+  "pass": 13,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "export mix succeeds",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase285-screenshots\\phase285-export.wav"
+    },
+    {
+      "scenario": "analyzeLoudness starts",
+      "result": "PASS",
+      "detail": "{\"jobId\":1,\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase285-screenshots\\\\phase285-export.wav\",\"truePeakOversample\":4,\"standard\":\"ITU-R BS.1770-4 / EBU R128\"}"
+    },
+    {
+      "scenario": "loudness result integrated valid",
+      "result": "PASS",
+      "detail": "{\"integrated\":-23.04688454310146,\"tp\":-23.01433448750622,\"overs\":4}"
+    },
+    {
+      "scenario": "true-peak oversample factor is 4",
+      "result": "PASS",
+      "detail": "4"
+    },
+    {
+      "scenario": "sample peak and true peak reported",
+      "result": "PASS",
+      "detail": "{\"sp\":-23.01028765848345,\"tp\":-23.01433448750622}"
+    },
+    {
+      "scenario": "silence yields unavailable LUFS",
+      "result": "PASS",
+      "detail": "{\"available\":false,\"integ\":false}"
+    },
+    {
+      "scenario": "short file peaks without integrated LUFS",
+      "result": "PASS",
+      "detail": "{\"integ\":false,\"peak\":-13.979403193037129}"
+    },
+    {
+      "scenario": "analysis cancellation",
+      "result": "PASS",
+      "detail": "{\"v\":1,\"event\":\"loudnessResult\",\"jobId\":4,\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase285-screenshots\\\\phase285-export.wav\",\"ok\":false,\"available\":false,\"cancelled\":true,\"error\":\"Loudness analysis was cancelled.\",\"sampleRate\":48000,\"channels\":2,\"frames\":144000,\"durationSeconds\":3,\"elapsedSeconds\":0.00348,\"truePeakOversample\":4,\"standard\":\"ITU-R BS.1770-4 / EBU R128\",\"integratedValid\":false,\"integratedLufs\":null,\"momentaryValid\":false,\"momentaryLufs\":null,\"shortTermValid\":false,\"shortTermLufs\":null,\"lraValid\":false,\"lraLu\":null,\"samplePeakValid\":false,\"samplePeakDbFs\":null,\"truePeakValid\":false,\"truePeakDbTp\":null,\"clippingSample\":false,\"clippingTruePeak\":false}"
+    },
+    {
+      "scenario": "repeat analysis succeeds",
+      "result": "PASS",
+      "detail": "-23.04688454310146"
+    },
+    {
+      "scenario": "missing file reports error",
+      "result": "PASS",
+      "detail": "Audio file not found: D:\\MusicStudioPro\\docs\\phase285-screenshots\\missing-285.wav"
+    },
+    {
+      "scenario": "loudness panel controls present",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"analyze\":true,\"target\":true}"
+    },
+    {
+      "scenario": "engine unavailable rejects without EPIPE",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "no renderer console errors",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

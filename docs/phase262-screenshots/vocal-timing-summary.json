@@ -1,0 +1,67 @@
+{
+  "pass": 11,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "clip imported for timing",
+      "result": "PASS",
+      "detail": "clip-1"
+    },
+    {
+      "scenario": "Timing Edit mode toggles on",
+      "result": "PASS",
+      "detail": "on"
+    },
+    {
+      "scenario": "Analyze Onsets creates markers",
+      "result": "PASS",
+      "detail": "markers=4"
+    },
+    {
+      "scenario": "manual marker add",
+      "result": "PASS",
+      "detail": "markers=5"
+    },
+    {
+      "scenario": "marker move (snap-independent store)",
+      "result": "PASS",
+      "detail": "timeline=0.52"
+    },
+    {
+      "scenario": "Apply timing (or bounded ratio reject)",
+      "result": "PASS",
+      "detail": "label=applied"
+    },
+    {
+      "scenario": "Timing mode does not silently move clip start",
+      "result": "PASS",
+      "detail": "start 0→0"
+    },
+    {
+      "scenario": "Revert timing restores provenance",
+      "result": "PASS",
+      "detail": "cleared"
+    },
+    {
+      "scenario": "save/reopen keeps timing markers",
+      "result": "PASS",
+      "detail": "markers=5"
+    },
+    {
+      "scenario": "source WAV protected",
+      "result": "PASS",
+      "detail": "unchanged"
+    },
+    {
+      "scenario": "timing controls present in UI",
+      "result": "PASS",
+      "detail": "{\"timing\":true,\"analyze\":true}"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

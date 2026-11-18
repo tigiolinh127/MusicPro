@@ -1,0 +1,44 @@
+# Dependencies and build output
+build/
+dist/
+node_modules/
+out/
+.cache/
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.pfx
+*.p12
+*.key
+credentials.json
+**/secrets/**
+
+# IDE and OS
+.vs/
+*.user
+Thumbs.db
+.DS_Store
+CMakeUserPresets.json
+
+# Logs and temp
+*.log
+*.tmp
+
+# Generated audio fixtures (source fixtures stay; WAV blobs do not)
+fixtures/*.wav
+docs/**/*.wav
+docs/**/userdata/
+docs/**/media-fixtures/
+docs/**/media/
+
+# GUI-check Electron caches (screenshots and summaries stay)
+docs/**/electron-user-data*/
+docs/**/Cache/

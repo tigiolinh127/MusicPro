@@ -1,0 +1,142 @@
+{
+  "pass": 26,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "URL watch parse",
+      "result": "PASS",
+      "detail": "{\"ok\":true,\"videoId\":\"dQw4w9WgXcQ\"}"
+    },
+    {
+      "scenario": "URL youtu.be parse",
+      "result": "PASS",
+      "detail": "{\"ok\":true,\"videoId\":\"dQw4w9WgXcQ\"}"
+    },
+    {
+      "scenario": "URL shorts parse",
+      "result": "PASS",
+      "detail": "{\"ok\":true,\"videoId\":\"dQw4w9WgXcQ\"}"
+    },
+    {
+      "scenario": "URL embed parse",
+      "result": "PASS",
+      "detail": "{\"ok\":true,\"videoId\":\"dQw4w9WgXcQ\"}"
+    },
+    {
+      "scenario": "bare video id parse",
+      "result": "PASS",
+      "detail": "{\"ok\":true,\"videoId\":\"dQw4w9WgXcQ\"}"
+    },
+    {
+      "scenario": "invalid URL rejected",
+      "result": "PASS",
+      "detail": "{\"ok\":false,\"error\":\"Only YouTube watch, share, embed, or shorts URLs are supported.\"}"
+    },
+    {
+      "scenario": "video id validator",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "embed URL uses nocookie",
+      "result": "PASS",
+      "detail": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?enablejsapi=1&origin=file%3A%2F%2F&rel=0&modestbranding=1&playsinline=1"
+    },
+    {
+      "scenario": "probe EngineHost started",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "engine disconnect rejects without EPIPE",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "recording start (virtual input)",
+      "result": "PASS",
+      "detail": "started"
+    },
+    {
+      "scenario": "recording stop state",
+      "result": "PASS",
+      "detail": "stopped"
+    },
+    {
+      "scenario": "recording stop yields vocal take",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\karaoke-k1-screenshots\\Karaoke Vocal take 4.wav"
+    },
+    {
+      "scenario": "vocal take persists on disk",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\karaoke-k1-screenshots\\Karaoke Vocal take 4.wav"
+    },
+    {
+      "scenario": "video position metadata persisted",
+      "result": "PASS",
+      "detail": "{\"videoId\":\"dQw4w9WgXcQ\",\"videoPositionSec\":12.5,\"recordedAt\":\"2026-11-09T14:07:23.474Z\",\"takePaths\":[\"D:\\\\MusicStudioPro\\\\docs\\\\karaoke-k1-screenshots\\\\Karaoke Vocal take 4.wav\"]}"
+    },
+    {
+      "scenario": "vocal WAV export copy",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\karaoke-k1-screenshots\\exported-vocal.wav"
+    },
+    {
+      "scenario": "local backing audio import",
+      "result": "PASS",
+      "detail": "imported"
+    },
+    {
+      "scenario": "mix export with vocal+backing tracks",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\karaoke-k1-screenshots\\karaoke-mix.wav"
+    },
+    {
+      "scenario": "source fixture WAV protected",
+      "result": "PASS",
+      "detail": "hash"
+    },
+    {
+      "scenario": "YouTube Karaoke tab opens",
+      "result": "PASS",
+      "detail": "{\"pressed\":true}"
+    },
+    {
+      "scenario": "Karaoke UI present",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"url\":true,\"load\":true}"
+    },
+    {
+      "scenario": "CSP allows YouTube frame/script hosts",
+      "result": "PASS",
+      "detail": "default-src 'self'; script-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://s.ytimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i"
+    },
+    {
+      "scenario": "renderer has studio bridge without node require",
+      "result": "PASS",
+      "detail": "true"
+    },
+    {
+      "scenario": "player lifecycle reaches handled status",
+      "result": "PASS",
+      "detail": "ready"
+    },
+    {
+      "scenario": "player error states are non-crashing",
+      "result": "PASS",
+      "detail": "ready"
+    },
+    {
+      "scenario": "no uncaughtException during karaoke check",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

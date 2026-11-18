@@ -1,0 +1,147 @@
+{
+  "pass": 27,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "Studio mode UI present",
+      "result": "PASS",
+      "detail": "{\"mode\":\"studio\",\"studio\":true,\"offset\":true,\"review\":true,\"record\":true,\"backingGain\":true,\"vocalGain\":true,\"noBacking\":true}"
+    },
+    {
+      "scenario": "backing and vocal volume controls",
+      "result": "PASS",
+      "detail": "{\"mode\":\"studio\",\"studio\":true,\"offset\":true,\"review\":true,\"record\":true,\"backingGain\":true,\"vocalGain\":true,\"noBacking\":true}"
+    },
+    {
+      "scenario": "missing backing explained",
+      "result": "PASS",
+      "detail": "{\"mode\":\"studio\",\"studio\":true,\"offset\":true,\"review\":true,\"record\":true,\"backingGain\":true,\"vocalGain\":true,\"noBacking\":true}"
+    },
+    {
+      "scenario": "manual offset control wired",
+      "result": "PASS",
+      "detail": "0.25"
+    },
+    {
+      "scenario": "YouTube mode remains available",
+      "result": "PASS",
+      "detail": "{\"mode\":\"youtube\",\"url\":true,\"hint\":true}"
+    },
+    {
+      "scenario": "YouTube no-capture boundary messaging",
+      "result": "PASS",
+      "detail": "{\"mode\":\"youtube\",\"url\":true,\"hint\":true}"
+    },
+    {
+      "scenario": "probe EngineHost started",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "engine disconnect rejects without EPIPE",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "local backing import",
+      "result": "PASS",
+      "detail": "imported"
+    },
+    {
+      "scenario": "track volume setTrack gain",
+      "result": "PASS",
+      "detail": "backing=0.5 vocal=1.200000047683716"
+    },
+    {
+      "scenario": "track effects attach for mix path",
+      "result": "PASS",
+      "detail": "eq"
+    },
+    {
+      "scenario": "manual offset seek before record",
+      "result": "PASS",
+      "detail": "0.25"
+    },
+    {
+      "scenario": "record refused while transport playing",
+      "result": "PASS",
+      "detail": "Stop or pause playback before recording."
+    },
+    {
+      "scenario": "record start with backing on timeline",
+      "result": "PASS",
+      "detail": "started"
+    },
+    {
+      "scenario": "transport plays during recording",
+      "result": "PASS",
+      "detail": "playing"
+    },
+    {
+      "scenario": "record stop",
+      "result": "PASS",
+      "detail": "stopped"
+    },
+    {
+      "scenario": "separate mic take WAV created",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\karaoke-k2-screenshots\\Karaoke Vocal take 5.wav"
+    },
+    {
+      "scenario": "take placed near manual offset",
+      "result": "PASS",
+      "detail": "0.25"
+    },
+    {
+      "scenario": "backing fixture unchanged (no capture into backing file)",
+      "result": "PASS",
+      "detail": "hash"
+    },
+    {
+      "scenario": "multiple takes supported",
+      "result": "PASS",
+      "detail": "takes=2 clips=1"
+    },
+    {
+      "scenario": "missing armed track handled",
+      "result": "PASS",
+      "detail": "Arm at least one track before recording."
+    },
+    {
+      "scenario": "mix export succeeds",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\karaoke-k2-screenshots\\k2-mix.wav"
+    },
+    {
+      "scenario": "mix export not silent",
+      "result": "PASS",
+      "detail": "rms=0.12894"
+    },
+    {
+      "scenario": "mix export duration includes content",
+      "result": "PASS",
+      "detail": "seconds=2.000"
+    },
+    {
+      "scenario": "vocal take is not backing audio file",
+      "result": "PASS",
+      "detail": "distinct"
+    },
+    {
+      "scenario": "no YouTube audio captured into engine state",
+      "result": "PASS",
+      "detail": "Karaoke Backing,clip-1,Karaoke Vocal,clip-2"
+    },
+    {
+      "scenario": "no uncaughtException during karaoke k2 check",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

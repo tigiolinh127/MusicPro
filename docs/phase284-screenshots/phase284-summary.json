@@ -1,0 +1,82 @@
+{
+  "pass": 14,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "compressor effect added",
+      "result": "PASS",
+      "detail": "fx-2"
+    },
+    {
+      "scenario": "hard-knee threshold/ratio mapping (~9 dB GR at -6)",
+      "result": "PASS",
+      "detail": "gr@~-6=8.578125"
+    },
+    {
+      "scenario": "soft knee mid-threshold GR (~1.125 dB)",
+      "result": "PASS",
+      "detail": "gr@thr=1.1964111328125"
+    },
+    {
+      "scenario": "makeup reflected on transfer curve",
+      "result": "PASS",
+      "detail": "out@~-6=-9.140625"
+    },
+    {
+      "scenario": "limiter effect added",
+      "result": "PASS",
+      "detail": "fx-3"
+    },
+    {
+      "scenario": "limiter sample-peak ceiling on curve",
+      "result": "PASS",
+      "detail": "kind=sample-peak out0=-6"
+    },
+    {
+      "scenario": "live gain-reduction meter from DSP",
+      "result": "PASS",
+      "detail": "gr=0"
+    },
+    {
+      "scenario": "dynamics editor controls present",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"canvas\":true,\"reset\":true,\"bypass\":true,\"gr\":true}"
+    },
+    {
+      "scenario": "bypass clears GR indication",
+      "result": "PASS",
+      "detail": "bypassed"
+    },
+    {
+      "scenario": "reset restores default compressor params",
+      "result": "PASS",
+      "detail": "{\"threshold\":-18,\"ratio\":4,\"attack\":10,\"release\":100,\"makeup\":0,\"knee\":0}"
+    },
+    {
+      "scenario": "save/load restores knee and limiter ceiling",
+      "result": "PASS",
+      "detail": "{\"comp\":{\"threshold\":-18,\"ratio\":3,\"attack\":10,\"release\":100,\"makeup\":0,\"knee\":8},\"lim\":{\"ceiling\":-0.5,\"release\":20,\"attack\":0.050000000745058}}"
+    },
+    {
+      "scenario": "export with compressor+limiter succeeds",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase284-screenshots\\phase284-export.wav"
+    },
+    {
+      "scenario": "engine unavailable rejects without EPIPE",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "no renderer console errors",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

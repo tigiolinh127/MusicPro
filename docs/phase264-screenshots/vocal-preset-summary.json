@@ -1,0 +1,72 @@
+{
+  "pass": 12,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "clip imported",
+      "result": "PASS",
+      "detail": "clips=1"
+    },
+    {
+      "scenario": "factory presets present",
+      "result": "PASS",
+      "detail": "factory=6"
+    },
+    {
+      "scenario": "Apply preset",
+      "result": "PASS",
+      "detail": "effects=3"
+    },
+    {
+      "scenario": "Repeated Apply does not duplicate",
+      "result": "PASS",
+      "detail": "effects=3"
+    },
+    {
+      "scenario": "Bypass disables effects",
+      "result": "PASS",
+      "detail": "bypassed"
+    },
+    {
+      "scenario": "Revert clears preset",
+      "result": "PASS",
+      "detail": "cleared"
+    },
+    {
+      "scenario": "Save custom preset",
+      "result": "PASS",
+      "detail": "custom-10"
+    },
+    {
+      "scenario": "Factory delete refused",
+      "result": "PASS",
+      "detail": "Factory vocal presets cannot be deleted."
+    },
+    {
+      "scenario": "save/reopen keeps custom + track preset",
+      "result": "PASS",
+      "detail": "presets=7"
+    },
+    {
+      "scenario": "source WAV protected",
+      "result": "PASS",
+      "detail": "unchanged"
+    },
+    {
+      "scenario": "Vocal Presets UI present",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"select\":true,\"apply\":true}"
+    },
+    {
+      "scenario": "UI Apply control clickable",
+      "result": "PASS",
+      "detail": "clicked"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

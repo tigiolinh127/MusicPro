@@ -1,0 +1,192 @@
+{
+  "pass": 36,
+  "fail": 0,
+  "not_run": 1,
+  "checks": [
+    {
+      "scenario": "autosave writes validated snapshot",
+      "result": "PASS",
+      "detail": "{\"ok\":true,\"snapshotPath\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\userdata\\\\autosave\\\\aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa\\\\snapshot-2026-11-12T14-44-54-382Z.msp.json\",\"savedAt\":\"2026-11-12T14:44:54.382Z\"}"
+    },
+    {
+      "scenario": "snapshot retention bounded",
+      "result": "PASS",
+      "detail": "count=10"
+    },
+    {
+      "scenario": "recovery lists latest snapshot",
+      "result": "PASS",
+      "detail": "{\"projectId\":\"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa\",\"projectName\":\"Alpha\",\"originalPath\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\alpha.json\",\"snapshotPath\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\userdata\\\\autosave\\\\aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa\\\\snapshot-2026-11-12T14-44-54-557Z.msp.json\",\"timestamp\":\"2026-11-12T14:44:54.557Z\",\"available\":true}"
+    },
+    {
+      "scenario": "corrupted snapshot rejected",
+      "result": "PASS",
+      "detail": "{\"ok\":false,\"error\":\"Autosave payload is not valid JSON.\"}"
+    },
+    {
+      "scenario": "unsupported schema version rejected",
+      "result": "PASS",
+      "detail": "{\"ok\":false,\"error\":\"Unsupported autosave schema version: 99\"}"
+    },
+    {
+      "scenario": "atomic write failure / invalid publish rejected",
+      "result": "PASS",
+      "detail": "{\"ok\":false,\"error\":\"Autosave payload is not valid JSON.\"}"
+    },
+    {
+      "scenario": "latest valid snapshot preserved after failed publish",
+      "result": "PASS",
+      "detail": "{\"projectId\":\"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa\",\"projectName\":\"Alpha\",\"originalPath\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\alpha.json\",\"snapshotPath\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\userdata\\\\autosave\\\\aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa\\\\snapshot-2026-11-12T14-44-54-557Z.msp.json\",\"timestamp\":\"2026-11-12T14:44:54.557Z\",\"available\":true}"
+    },
+    {
+      "scenario": "recovery copies working file without touching original",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase291-screenshots\\recovered-working-copy.json"
+    },
+    {
+      "scenario": "recent projects dedupe by path",
+      "result": "PASS",
+      "detail": "[{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\alpha.json\",\"name\":\"Alpha\",\"projectId\":\"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa\",\"lastOpenedAt\":\"2026-11-12T14:44:54.579Z\",\"available\":true}]"
+    },
+    {
+      "scenario": "recent projects mark availability",
+      "result": "PASS",
+      "detail": "{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\alpha.json\",\"name\":\"Alpha\",\"projectId\":\"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa\",\"lastOpenedAt\":\"2026-11-12T14:44:54.580Z\",\"available\":true}"
+    },
+    {
+      "scenario": "missing recent path marked unavailable",
+      "result": "PASS",
+      "detail": "{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\missing-recent.json\",\"name\":\"Missing\",\"projectId\":\"dddddddd-dddd-dddd-dddd-dddddddddddd\",\"lastOpenedAt\":\"2026-11-12T14:44:54.580Z\",\"available\":false}"
+    },
+    {
+      "scenario": "unavailable recent can be removed",
+      "result": "PASS",
+      "detail": "[{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\alpha.json\",\"name\":\"Alpha\",\"projectId\":\"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa\",\"lastOpenedAt\":\"2026-11-12T14:44:54.580Z\",\"available\":true}]"
+    },
+    {
+      "scenario": "discard removes recovery snapshots",
+      "result": "PASS",
+      "detail": "discarded"
+    },
+    {
+      "scenario": "newProject assigns identity",
+      "result": "PASS",
+      "detail": "{\"transport\":\"stopped\",\"position\":0,\"duration\":0,\"renderTail\":{\"enabled\":true,\"maxSeconds\":10,\"thresholdDb\":-90},\"sampleRate\":48000,\"bufferSize\":480,\"masterGain\":1,\"inputGainDb\":0,\"monitor\":false,\"deviceOpen\":true,\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"\",\"inputChannels\":0,\"outputChannels\":2,\"reportedLatencyMs\":10,\"deviceError\":\"\",\"canUndo\":false,\"canRedo\":false,\"projectId\":\"ecd5bed3-a1f7-4867-b6c2-a1e5580898b1\",\"projectName\":\"291 Session\",\"tracks\":[],\"vocalPresets\":[{\"id\":\"factory-clean-vocal\",\"name\":\"Clean Vocal\",\"factory\":true,\"effects\":[{\"type\":\"gate\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true}]},{\"id\":\"factory-warm-vocal\",\"name\":\"Warm Vocal\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-bright-vocal\",\"name\":\"Bright Vocal\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-soft-ballad\",\"name\":\"Soft Ballad\",\"factory\":true,\"effects\":[{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true},{\"type\":\"reverb\",\"enabled\":true}]},{\"id\":\"factory-podcast-voice\",\"name\":\"Podcast Voice\",\"factory\":true,\"effects\":[{\"type\":\"gate\",\"enabled\":true},{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true}]},{\"id\":\"factory-vocal-reverb\",\"name\":\"Vocal Reverb\",\"factory\":true,\"effects\":[{\"type\":\"eq\",\"enabled\":true},{\"type\":\"compressor\",\"enabled\":true},{\"type\":\"reverb\",\"enabled\":true}]}],\"masterEffects\":[],\"masterAutomation\":[],\"buses\":[],\"record\":{\"state\":\"idle\",\"folder\":\"C:\\\\Users\\\\hello\\\\Documents\\\\Music Studio Pro\\\\Recordings\",\"startSeconds\":0,\"elapsedSeconds\":0,\"droppedFrames\":0,\"maxSeconds\":1800,\"virtualInput\":{\"enabled\":false,\"frequency\":440,\"level\":0.5},\"lastTake\":null,\"latency\":{\"offsetMs\":-12,\"offsetSamples\":-576,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\n\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"none\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":null}},\"pitch\":{\"processedFolder\":\"C:\\\\Users\\\\hello\\\\Documents\\\\Music Studio Pro\\\\Processed\",\"preview\":null,\"mapping\":{\"enabled\":false,\"root\":\"C\",\"scale\":\"major\",\"scaleLabel\":\"Major\",\"tieBreak\":\"lower\",\"toleranceCents\":10,\"pitchClasses\":[0,2,4,5,7,9,11]}},\"vocalWorkflow\":{\"order\":[\"record\",\"comp\",\"timing\",\"breath\",\"pitch\",\"presets\",\"mix\"],\"previews\":{\"pitch\":false,\"breath\":false,\"preset\":false},\"liveAutoTuneInExport\":false,\"note\":\"Processing order: source â comp â timing â breath â offline pitch â clip gain/fades â track FX/presets â mix/export. Live Auto-Tune is monitor/record only and is not exported.\"}}"
+    },
+    {
+      "scenario": "media import for project persistence",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase291-screenshots\\phase291-tone.wav"
+    },
+    {
+      "scenario": "manual save succeeds",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase291-screenshots\\manual-save.msp.json"
+    },
+    {
+      "scenario": "manual save stores identity + media refs",
+      "result": "PASS",
+      "detail": "{\"id\":\"ecd5bed3-a1f7-4867-b6c2-a1e5580898b1\",\"name\":\"291 Manual\",\"tracks\":1}"
+    },
+    {
+      "scenario": "media references preserved in project file",
+      "result": "PASS",
+      "detail": "refs checked"
+    },
+    {
+      "scenario": "save as writes separate file",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase291-screenshots\\save-as.msp.json"
+    },
+    {
+      "scenario": "open project succeeds",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "failed load does not replace active project",
+      "result": "PASS",
+      "detail": "{\"err\":\"Project file is not valid JSON.\",\"beforeName\":\"291 Manual\",\"afterName\":\"291 Manual\"}"
+    },
+    {
+      "scenario": "unsupported project version rejected",
+      "result": "PASS",
+      "detail": "Unsupported project version. This build opens project versions 1 to 6."
+    },
+    {
+      "scenario": "autosave snapshot separate from manual file",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase291-screenshots\\userdata\\autosave\\ecd5bed3-a1f7-4867-b6c2-a1e5580898b1\\snapshot-2026-11-12T14-44-54-798Z.msp.json"
+    },
+    {
+      "scenario": "autosave did not overwrite manual project bytes",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase291-screenshots\\manual-save.msp.json"
+    },
+    {
+      "scenario": "project bar visible",
+      "result": "PASS",
+      "detail": "data-project-bar"
+    },
+    {
+      "scenario": "dirty indicator after edit",
+      "result": "PASS",
+      "detail": "{\"dirty\":\"true\",\"status\":{\"dirty\":true,\"path\":null,\"name\":\"Untitled\",\"projectId\":\"3ef28e06-3eeb-4c1f-8d4e-9fe70ea9f972\",\"lastAutosaveAt\":null,\"autosaveEnabled\":true,\"autosaveBusy\":false,\"dirtyGeneration\":1,\"savedGeneration\":0}}"
+    },
+    {
+      "scenario": "edits during async save keep dirty",
+      "result": "PASS",
+      "detail": "{\"keptDirty\":true,\"detail\":{\"dirty\":true,\"path\":null,\"name\":\"Untitled\",\"projectId\":\"3ef28e06-3eeb-4c1f-8d4e-9fe70ea9f972\",\"lastAutosaveAt\":null,\"autosaveEnabled\":true,\"autosaveBusy\":false,\"dirtyGeneration\":3,\"savedGeneration\":0}}"
+    },
+    {
+      "scenario": "autosave does not clear dirty",
+      "result": "PASS",
+      "detail": "{\"dirty\":true,\"last\":\"2026-11-12T14:44:55.405Z\"}"
+    },
+    {
+      "scenario": "no duplicate concurrent autosaves (busy guard)",
+      "result": "PASS",
+      "detail": "busy ref serializes"
+    },
+    {
+      "scenario": "unsaved changes dialog on new",
+      "result": "PASS",
+      "detail": "dialog"
+    },
+    {
+      "scenario": "unsaved cancel aborts operation",
+      "result": "PASS",
+      "detail": "closed"
+    },
+    {
+      "scenario": "save as cancellation aborts leave",
+      "result": "PASS",
+      "detail": "covered by unsaved cancel + null dialog paths"
+    },
+    {
+      "scenario": "no autosave during recording (hardware)",
+      "result": "NOT RUN",
+      "detail": "NO HARDWARE"
+    },
+    {
+      "scenario": "recovery selection available",
+      "result": "PASS",
+      "detail": "{\"projectId\":\"eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee\",\"projectName\":\"Recover Me\",\"originalPath\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\orig.json\",\"snapshotPath\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase291-screenshots\\\\userdata\\\\autosave\\\\eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee\\\\snapshot-2026-11-12T14-44-56-583Z.msp.json\",\"timestamp\":\"2026-11-12T14:44:56.583Z\",\"available\":true}"
+    },
+    {
+      "scenario": "recover / discard / cancel APIs present",
+      "result": "PASS",
+      "detail": "discardRecovery + copyRecovery + decide later UI"
+    },
+    {
+      "scenario": "canceled file dialogs safe (null path)",
+      "result": "PASS",
+      "detail": "pick* returns null; open/save abort"
+    },
+    {
+      "scenario": "renderer console clean",
+      "result": "PASS",
+      "detail": "ok"
+    }
+  ]
+}

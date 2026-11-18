@@ -1,0 +1,167 @@
+{
+  "pass": 31,
+  "fail": 0,
+  "not_run": 1,
+  "checks": [
+    {
+      "scenario": "snap prefers nearby clip edge / playhead target",
+      "result": "PASS",
+      "detail": "1"
+    },
+    {
+      "scenario": "snap falls back to zoom grid",
+      "result": "PASS",
+      "detail": "1.05"
+    },
+    {
+      "scenario": "zoom keeps anchor time under same viewport X",
+      "result": "PASS",
+      "detail": "1200"
+    },
+    {
+      "scenario": "fit pixels/sec clamps sensibly",
+      "result": "PASS",
+      "detail": "73"
+    },
+    {
+      "scenario": "selection key stable",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "import clips for editing",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "clips present after import",
+      "result": "PASS",
+      "detail": "{\"a\":\"clip-1\",\"b\":\"clip-2\"}"
+    },
+    {
+      "scenario": "clip movement",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "clip trimming",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "clip splitting at playhead",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "split yields multiple clips",
+      "result": "PASS",
+      "detail": "2"
+    },
+    {
+      "scenario": "clip duplication",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "clip deletion",
+      "result": "PASS",
+      "detail": "3→2"
+    },
+    {
+      "scenario": "undo restores clip edit",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "redo reapplies clip edit",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "media references preserved",
+      "result": "PASS",
+      "detail": "source ids retained"
+    },
+    {
+      "scenario": "multi-selection updates without dirty",
+      "result": "PASS",
+      "detail": "{\"clips\":[{\"trackId\":\"track-1\",\"clipId\":\"clip-1\"},{\"trackId\":\"track-1\",\"clipId\":\"clip-3\"}],\"before\":{\"dirty\":false,\"dirtyGeneration\":0,\"pixelsPerSecond\":80,\"snap\":true,\"laneHeight\":164,\"bpm\":120,\"selectedCount\":0,\"selected\":null,\"position\":0.7,\"arrangementEnd\":2.5},\"after\":{\"dirty\":false,\"dirtyGeneration\":0,\"pixelsPerSecond\":80,\"snap\":true,\"laneHeight\":164,\"bpm\":120,\"selectedCount\":2,\"selected\":{\"trackId\":\"track-1\",\"clipId\":\"clip-1\"},\"position\":0.7,\"arrangementEnd\":2.5}}"
+    },
+    {
+      "scenario": "timeline zoom accuracy",
+      "result": "PASS",
+      "detail": "80→160"
+    },
+    {
+      "scenario": "fit project changes zoom",
+      "result": "PASS",
+      "detail": "140"
+    },
+    {
+      "scenario": "center playhead control present",
+      "result": "PASS",
+      "detail": "clicked"
+    },
+    {
+      "scenario": "track height adjustment",
+      "result": "PASS",
+      "detail": "164→188"
+    },
+    {
+      "scenario": "snap enable/disable",
+      "result": "PASS",
+      "detail": "snap on"
+    },
+    {
+      "scenario": "horizontal scrolling",
+      "result": "PASS",
+      "detail": "scrollLeft"
+    },
+    {
+      "scenario": "playhead synchronization",
+      "result": "PASS",
+      "detail": "1.25"
+    },
+    {
+      "scenario": "playback safety during timeline ops",
+      "result": "PASS",
+      "detail": "play/stop ok"
+    },
+    {
+      "scenario": "UI-only snap toggle does not dirty",
+      "result": "PASS",
+      "detail": "0→0"
+    },
+    {
+      "scenario": "dirty-state after meaningful edit",
+      "result": "PASS",
+      "detail": "dirty"
+    },
+    {
+      "scenario": "autosave compatibility (dirty retained)",
+      "result": "PASS",
+      "detail": "dirty after autosave"
+    },
+    {
+      "scenario": "project save after timeline edits",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase292-screenshots\\phase292-project.msp.json"
+    },
+    {
+      "scenario": "timeline navigation controls visible",
+      "result": "PASS",
+      "detail": "fit + canvas"
+    },
+    {
+      "scenario": "recording safety (hardware)",
+      "result": "NOT RUN",
+      "detail": "NO HARDWARE"
+    },
+    {
+      "scenario": "renderer console clean",
+      "result": "PASS",
+      "detail": "ok"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "pass": 21,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "recording workflow panel present",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"status\":true,\"monitor\":true,\"startStop\":true,\"review\":true,\"retake\":true,\"micError\":true,\"pauseDisabled\":true,\"stopDisabled\":true}"
+    },
+    {
+      "scenario": "missing microphone surfaced in Editor",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"status\":true,\"monitor\":true,\"startStop\":true,\"review\":true,\"retake\":true,\"micError\":true,\"pauseDisabled\":true,\"stopDisabled\":true}"
+    },
+    {
+      "scenario": "pause/stop enabled when idle (valid)",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"status\":true,\"monitor\":true,\"startStop\":true,\"review\":true,\"retake\":true,\"micError\":true,\"pauseDisabled\":true,\"stopDisabled\":true}"
+    },
+    {
+      "scenario": "probe EngineHost started",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "engine disconnect rejects without EPIPE",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "invalid record without arm rejected",
+      "result": "PASS",
+      "detail": "Arm at least one track before recording."
+    },
+    {
+      "scenario": "record-arm transition",
+      "result": "PASS",
+      "detail": "armed"
+    },
+    {
+      "scenario": "monitoring mode selection (track monitor on)",
+      "result": "PASS",
+      "detail": "{\"id\":\"track-1\",\"name\":\"Vocal 271\",\"path\":\"\",\"gain\":1,\"pan\":0,\"mute\":false,\"solo\":false,\"duration\":0,\"sourceSampleRate\":0,\"channels\":0,\"missing\":false,\"error\":\"\",\"clips\":[],\"output\":\"master\",\"sends\":[],\"effects\":[],\"automation\":[],\"armed\":true,\"recordInput\":\"1\",\"recordMode\":\"dry\",\"monitorInput\":true,\"takesExpanded\":false,\"compCrossfadeMs\":5,\"takes\":[]}"
+    },
+    {
+      "scenario": "RAW/CORRECTED monitor mode selection",
+      "result": "PASS",
+      "detail": "{\"liveRaw\":{\"enabled\":true,\"bypassed\":false,\"analysis\":\"inCallback\",\"input\":\"mix\",\"workerMarginMs\":6,\"root\":\"C\",\"scale\":\"major\",\"scaleLabel\":\"Major\",\"retuneMs\":20,\"strength\":100,\"formantPreservation\":false,\"formantNote\":\"Formants move with the corrected pitch; live formant preservation is not implemented.\",\"routing\":{\"trackInputMonitoring\":\"raw\",\"monitorMode\":\"raw\",\"micMonitor\":\"raw\",\"recording\":\"corrected\",\"note\":\"Armed tracks record the corrected input. Track input monitoring hears the raw input delayed by the same DSP latency so mode switches stay aligned. Mic monitor stays raw and undelayed.\"},\"monitorMode\":\"raw\",\"warnings\":[],\"deviceOutputLatencySamples\":480,\"sampleRate\":48000,\"maxBlockSize\":480,\"channels\":2,\"fadeSamples\":480,\"latencySamples\":1115,\"latencyMs\":23.229,\"latency\":{\"windowSize\":1216,\"hopSize\":128,\"detectionSamples\":736,\"detectionMs\":15.333,\"deliverySamples\":0,\"deliveryMs\":0,\"shifterSamples\":379,\"shifterMs\":7.896,\"bufferingSamples\":0,\"totalSamples\":1115,\"totalMs\":23.229},\"monitoringLatency\":{\"dspSamples\":1115,\"dspMs\":23.229,\"deviceOutputSamples\":480,\"deviceOutputMs\":10,\"endToEndMs\":null,\"endToEndNote\":\"End-to-end monitoring latency is unavailable: the engine does not measure device input latency.\",\"trackMonitoring\":\"rawAligned\"},\"bufferBytes\":212232,\"statistics\":{\"calls\":0,\"samples\":0,\"averageMs\":0,\"peakMs\":0,\"averageLoad\":0,\"peakLoad\":0,\"overBudgetCalls\":0,\"sanitizedSamples\":0,\"skippedBlocks\":0,\"windows\":0,\"voicedWindows\":0,\"meanWindowMs\":0,\"maxWindowMs\":0,\"resultsReceived\":0,\"lateResults\":0,\"staleResults\":0,\"resultsDropped\":0,\"analysisDroppedFrames\":0,\"analysisGaps\":0,\"missingSamples\":0,\"correctedSamples\":0,\"maxDeliveryLagSamples\":0,\"meanDeliveryLagSamples\":0,\"jumps\":0,\"recentres\":0,\"recoveries\":0,\"resets\":1},\"current\":{\"inputMidi\":0,\"targetMidi\":-1,\"targetName\":\"\",\"appliedCents\":0}},\"liveCorr\":{\"enabled\":true,\"bypassed\":false,\"analysis\":\"inCallback\",\"input\":\"mix\",\"workerMarginMs\":6,\"root\":\"C\",\"scale\":\"major\",\"scaleLabel\":\"Major\",\"retuneMs\":20,\"strength\":100,\"formantPreservation\":false,\"formantNote\":\"Formants move with the corrected pitch; live formant preservation is not implemented.\",\"routing\":{\"trackInputMonitoring\":\"corrected\",\"monitorMode\":\"corrected\",\"micMonitor\":\"raw\",\"recording\":\"corrected\",\"note\":\"Armed tracks record and monitor the corrected input, late by latencySamples (no delay compensation). The direct Mic monitor path plays the raw device input and is not corrected.\"},\"monitorMode\":\"corrected\",\"warnings\":[],\"deviceOutputLatencySamples\":480,\"sampleRate\":48000,\"maxBlockSize\":480,\"channels\":2,\"fadeSamples\":480,\"latencySamples\":1115,\"latencyMs\":23.229,\"latency\":{\"windowSize\":1216,\"hopSize\":128,\"detectionSamples\":736,\"detectionMs\":15.333,\"deliverySamples\":0,\"deliveryMs\":0,\"shifterSamples\":379,\"shifterMs\":7.896,\"bufferingSamples\":0,\"totalSamples\":1115,\"totalMs\":23.229},\"monitoringLatency\":{\"dspSamples\":1115,\"dspMs\":23.229,\"deviceOutputSamples\":480,\"deviceOutputMs\":10,\"endToEndMs\":null,\"endToEndNote\":\"End-to-end monitoring latency is unavailable: the engine does not measure device input latency.\",\"trackMonitoring\":\"corrected\"},\"bufferBytes\":212232,\"statistics\":{\"calls\":0,\"samples\":0,\"averageMs\":0,\"peakMs\":0,\"averageLoad\":0,\"peakLoad\":0,\"overBudgetCalls\":0,\"sanitizedSamples\":0,\"skippedBlocks\":0,\"windows\":0,\"voicedWindows\":0,\"meanWindowMs\":0,\"maxWindowMs\":0,\"resultsReceived\":0,\"lateResults\":0,\"staleResults\":0,\"resultsDropped\":0,\"analysisDroppedFrames\":0,\"analysisGaps\":0,\"missingSamples\":0,\"correctedSamples\":0,\"maxDeliveryLagSamples\":0,\"meanDeliveryLagSamples\":0,\"jumps\":0,\"recentres\":0,\"recoveries\":0,\"resets\":1},\"current\":{\"inputMidi\":0,\"targetMidi\":-1,\"targetName\":\"\",\"appliedCents\":0}}}"
+    },
+    {
+      "scenario": "invalid record while playing rejected",
+      "result": "PASS",
+      "detail": "Stop or pause playback before recording."
+    },
+    {
+      "scenario": "record start with playback path",
+      "result": "PASS",
+      "detail": "started"
+    },
+    {
+      "scenario": "transport plays during recording",
+      "result": "PASS",
+      "detail": "playing/recording"
+    },
+    {
+      "scenario": "record stop",
+      "result": "PASS",
+      "detail": "stopped"
+    },
+    {
+      "scenario": "take creation",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase271-screenshots\\Vocal Rec 271 take 7.wav"
+    },
+    {
+      "scenario": "multiple takes / retake keeps earlier",
+      "result": "PASS",
+      "detail": "takes=2 firstExists=true"
+    },
+    {
+      "scenario": "invalid remove while recording rejected",
+      "result": "PASS",
+      "detail": "That track is recording. Stop recording before removing it."
+    },
+    {
+      "scenario": "project intact after cancel/stop",
+      "result": "PASS",
+      "detail": "Vocal 271,Vocal Rec 271"
+    },
+    {
+      "scenario": "arm exposes monitoring control",
+      "result": "PASS",
+      "detail": "{\"armedMon\":true,\"hasArmButton\":true,\"statusText\":\"Engine: connected · device openInput: virtual test signalArmed: Track 1Recording: idleTrack input monitor: ON (headphones recommended)Auto-Tune monitor: off (enable Auto-Tune below for RAW/CORRECTED)\"}"
+    },
+    {
+      "scenario": "input selection states in status",
+      "result": "PASS",
+      "detail": "Engine: connected · device openInput: virtual test signalArmed: Track 1Recording: idleTrack input monitor: ON (headphones recommended)Auto-Tune monitor: off (enable Auto-Tune below for RAW/CORRECTED)"
+    },
+    {
+      "scenario": "monitoring mode control present",
+      "result": "PASS",
+      "detail": "{\"present\":true,\"disabled\":true}"
+    },
+    {
+      "scenario": "no renderer console errors",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

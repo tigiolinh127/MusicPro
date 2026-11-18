@@ -1,0 +1,107 @@
+{
+  "pass": 18,
+  "fail": 0,
+  "notRun": 2,
+  "checks": [
+    {
+      "scenario": "latency calibration UI present",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"latency\":true,\"offset\":true,\"reset\":true}"
+    },
+    {
+      "scenario": "milliseconds-to-samples sign and direction",
+      "result": "PASS",
+      "detail": "{\"plus\":480,\"minus\":-480}"
+    },
+    {
+      "scenario": "probe EngineHost started",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "default offset is 0",
+      "result": "PASS",
+      "detail": "{\"offsetMs\":0,\"offsetSamples\":0,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\n\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"none\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":null}"
+    },
+    {
+      "scenario": "offset rejects out-of-range",
+      "result": "PASS",
+      "detail": "Recording offset must be between -500 and +500 ms."
+    },
+    {
+      "scenario": "manual negative offset (place earlier)",
+      "result": "PASS",
+      "detail": "{\"offsetMs\":-40,\"offsetSamples\":-1920,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\n\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"manual\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":null}"
+    },
+    {
+      "scenario": "device profile persistence",
+      "result": "PASS",
+      "detail": "{\"offsetMs\":-40,\"offsetSamples\":-1920,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\n\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"manual\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":null}"
+    },
+    {
+      "scenario": "sample-rate-aware offset samples",
+      "result": "PASS",
+      "detail": "{\"offsetMs\":10,\"offsetSamples\":480,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\n\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"manual\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":null,\"expectedSamples\":480}"
+    },
+    {
+      "scenario": "reset behavior",
+      "result": "PASS",
+      "detail": "{\"offsetMs\":0,\"offsetSamples\":0,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\n\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"none\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":null}"
+    },
+    {
+      "scenario": "correlation calculation (synthetic)",
+      "result": "PASS",
+      "detail": "{\"delayMs\":2,\"delaySamples\":96,\"confidence\":1,\"peakCorrelation\":1,\"reliable\":true,\"message\":\"Reliable delay estimate.\",\"sampleRate\":48000,\"suggestedOffsetMs\":-2,\"suggestedOffsetNote\":\"Suggested offsetMs = âdelayMs so a late recording is placed earlier on the timeline.\",\"applied\":false}"
+    },
+    {
+      "scenario": "apply reliable estimate → negative offset",
+      "result": "PASS",
+      "detail": "{\"offsetMs\":-2,\"offsetSamples\":-96,\"maxOffsetMs\":500,\"profileKey\":\"Speakers (2- Realtek High Definition Audio)\\n\\n48000\\n480\",\"outputDevice\":\"Speakers (2- Realtek High Definition Audio)\",\"inputDevice\":\"\",\"sampleRate\":48000,\"bufferSize\":480,\"reportedOutputLatencyMs\":10,\"reportedOutputLatencySamples\":480,\"method\":\"loopback-estimate\",\"signConvention\":\"Positive offsetMs places new takes later on the timeline; negative places them earlier. If vocals sit late vs backing, use a negative offset. Existing takes are never moved.\",\"notes\":\"Offset applies only to new take placement. It does not compensate Live Auto-Tune DSP latency (already present in recorded samples) and does not equal reported output-device latency.\",\"lastEstimate\":{\"delayMs\":2,\"delaySamples\":96,\"confidence\":1,\"peakCorrelation\":1,\"reliable\":true,\"message\":\"Reliable delay estimate.\"}}"
+    },
+    {
+      "scenario": "invalid measurement handling",
+      "result": "PASS",
+      "detail": "{\"delayMs\":0,\"delaySamples\":0,\"confidence\":0,\"peakCorrelation\":0,\"reliable\":false,\"message\":\"Reference or recorded signal is silent — cannot estimate delay.\",\"sampleRate\":48000,\"suggestedOffsetMs\":0,\"suggestedOffsetNote\":\"Suggested offsetMs = âdelayMs so a late recording is placed earlier on the timeline.\",\"applied\":false}"
+    },
+    {
+      "scenario": "unreliable estimate not applied",
+      "result": "PASS",
+      "detail": "The last estimate is not reliable enough to apply. Re-run calibration or pass force true after reviewing the result."
+    },
+    {
+      "scenario": "recording placement uses offset",
+      "result": "PASS",
+      "detail": "{\"startSeconds\":0.98,\"startSamples\":47040,\"captureStartSamples\":48000,\"placementOffsetMs\":-20,\"placementOffsetSamples\":-960,\"takes\":[{\"trackId\":\"track-2\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase274-screenshots\\\\Latency 274 take 3.wav\",\"kind\":\"dry\",\"channels\":1,\"frames\":16800,\"seconds\":0.35,\"gapFrames\":0,\"error\":\"\",\"clipId\":\"clip-2\",\"takeId\":\"take-1\",\"placed\":true}],\"droppedFrames\":0,\"overflowEvents\":0,\"warnings\":[]}"
+    },
+    {
+      "scenario": "existing take preservation",
+      "result": "PASS",
+      "detail": "{\"firstStart\":47040,\"firstStill\":47040}"
+    },
+    {
+      "scenario": "engine unavailable rejects without EPIPE",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "UI shows offset / reset path",
+      "result": "PASS",
+      "detail": "{\"text\":\"Current offset: +0.0 ms (0 samples)\"}"
+    },
+    {
+      "scenario": "no renderer console errors",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    },
+    {
+      "scenario": "physical loopback calibration",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "pass": 16,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "mixer UX panel present",
+      "result": "PASS",
+      "detail": "{\"panel\":true,\"clearPeaks\":true,\"master\":true}"
+    },
+    {
+      "scenario": "fader display mapping unity / +6 dB / −inf",
+      "result": "PASS",
+      "detail": "{\"unity\":true,\"plus6\":true,\"minusInf\":true}"
+    },
+    {
+      "scenario": "probe EngineHost started",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "track meter has peak/RMS/peakHold/dBFS",
+      "result": "PASS",
+      "detail": "{\"id\":\"track-1\",\"available\":true,\"peakL\":0.282842695713043,\"peakR\":0.282842695713043,\"rmsL\":0.20062418282032,\"rmsR\":0.20062418282032,\"levelL\":0.282842695713043,\"levelR\":0.282842695713043,\"peakHoldL\":0.282842695713043,\"peakHoldR\":0.282842695713043,\"clip\":false,\"peakDbFS\":-10.969100952148438,\"rmsDbFS\":-13.952333450317383}"
+    },
+    {
+      "scenario": "master meter stereo peak/RMS",
+      "result": "PASS",
+      "detail": "{\"available\":true,\"peakL\":0.282842695713043,\"peakR\":0.282842695713043,\"rmsL\":0.20062418282032,\"rmsR\":0.20062418282032,\"levelL\":0.282842695713043,\"levelR\":0.282842695713043,\"peakHoldL\":0.282842695713043,\"peakHoldR\":0.282842695713043,\"clip\":false,\"peakDbFS\":-10.969100952148438,\"rmsDbFS\":-13.952333450317383}"
+    },
+    {
+      "scenario": "mono/stereo handling (stereo fixture → L and R)",
+      "result": "PASS",
+      "detail": "{\"peakL\":0.282842695713043,\"peakR\":0.282842695713043}"
+    },
+    {
+      "scenario": "clip detection on hot strip",
+      "result": "PASS",
+      "detail": "{\"clipped\":{\"id\":\"track-1\",\"available\":true,\"peakL\":1.131370782852173,\"peakR\":1.131370782852173,\"rmsL\":0.806843400001526,\"rmsR\":0.806843400001526,\"levelL\":1.131370782852173,\"levelR\":1.131370782852173,\"peakHoldL\":1.131370782852173,\"peakHoldR\":1.131370782852173,\"clip\":true,\"peakDbFS\":1.072099208831787,\"rmsDbFS\":-1.864215016365051},\"master\":{\"available\":true,\"peakL\":1.131370782852173,\"peakR\":1.131370782852173,\"rmsL\":0.806843400001526,\"rmsR\":0.806843400001526,\"levelL\":1.131370782852173,\"levelR\":1.131370782852173,\"peakHoldL\":1.131370782852173,\"peakHoldR\":1.131370782852173,\"clip\":true,\"peakDbFS\":1.072099208831787,\"rmsDbFS\":-1.864215016365051}}"
+    },
+    {
+      "scenario": "peak hold / clip reset via resetClips",
+      "result": "PASS",
+      "detail": "{\"resetTrack\":{\"id\":\"track-1\",\"available\":true,\"peakL\":0.070710673928261,\"peakR\":0.070710673928261,\"rmsL\":0.05003372579813,\"rmsR\":0.05003372579813,\"levelL\":0.070710673928261,\"levelR\":0.070710673928261,\"peakHoldL\":0.070710673928261,\"peakHoldR\":0.070710673928261,\"clip\":false,\"peakDbFS\":-23.01030158996582,\"rmsDbFS\":-26.01474380493164},\"master\":{\"available\":true,\"peakL\":0.070710673928261,\"peakR\":0.070710673928261,\"rmsL\":0.05003372579813,\"rmsR\":0.05003372579813,\"levelL\":0.070710673928261,\"levelR\":0.070710673928261,\"peakHoldL\":0.070710673928261,\"peakHoldR\":0.070710673928261,\"clip\":false,\"peakDbFS\":-23.01030158996582,\"rmsDbFS\":-26.01474380493164}}"
+    },
+    {
+      "scenario": "mute reflects engine state",
+      "result": "PASS",
+      "detail": "{\"id\":\"track-1\",\"name\":\"Mix UX 273\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase273-screenshots\\\\phase273-tone.wav\",\"gain\":1,\"pan\":0,\"mute\":true,\"solo\":false,\"duration\":1,\"sourceSampleRate\":48000,\"channels\":2,\"missing\":false,\"error\":\"\",\"clips\":[{\"id\":\"clip-1\",\"sourceFileId\":\"track-1-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"gain\":1}],\"output\":\"master\",\"sends\":[],\"effects\":[],\"automation\":[],\"armed\":false,\"recordInput\":\"1\",\"recordMode\":\"dry\",\"monitorInput\":false,\"takesExpanded\":false,\"compCrossfadeMs\":5,\"takes\":[]}"
+    },
+    {
+      "scenario": "solo reflects engine state",
+      "result": "PASS",
+      "detail": "{\"id\":\"track-1\",\"name\":\"Mix UX 273\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase273-screenshots\\\\phase273-tone.wav\",\"gain\":1,\"pan\":0,\"mute\":false,\"solo\":true,\"duration\":1,\"sourceSampleRate\":48000,\"channels\":2,\"missing\":false,\"error\":\"\",\"clips\":[{\"id\":\"clip-1\",\"sourceFileId\":\"track-1-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"gain\":1}],\"output\":\"master\",\"sends\":[],\"effects\":[],\"automation\":[],\"armed\":false,\"recordInput\":\"1\",\"recordMode\":\"dry\",\"monitorInput\":false,\"takesExpanded\":false,\"compCrossfadeMs\":5,\"takes\":[]}"
+    },
+    {
+      "scenario": "channel strip gain maps ≈ −6 dB",
+      "result": "PASS",
+      "detail": "gain=0.501187205314636"
+    },
+    {
+      "scenario": "engine disconnect rejects without EPIPE",
+      "result": "PASS",
+      "detail": "The audio engine is not running."
+    },
+    {
+      "scenario": "channel strip state (name/fader/mute controls)",
+      "result": "PASS",
+      "detail": "{\"strip\":true,\"faderDb\":\"+0.0 dB\",\"mute\":false,\"peakText\":\"P −∞\",\"unavailable\":false}"
+    },
+    {
+      "scenario": "mute/solo UI synchronization",
+      "result": "PASS",
+      "detail": "mutePressed=true"
+    },
+    {
+      "scenario": "master clear peak action present",
+      "result": "PASS",
+      "detail": "true"
+    },
+    {
+      "scenario": "no renderer console errors",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

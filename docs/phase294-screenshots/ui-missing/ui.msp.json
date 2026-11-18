@@ -1,0 +1,67 @@
+{
+  "format": "music-studio-pro-project",
+  "version": 6,
+  "masterGain": 1,
+  "monitorEnabled": false,
+  "sampleRate": 48000,
+  "bufferSize": 480,
+  "outputDevice": "Speakers (2- Realtek High Definition Audio)",
+  "inputDevice": "",
+  "projectId": "a7630c02-6c3f-4d61-8113-459e55eca8d9",
+  "projectName": "294 UI",
+  "tracks": [
+    {
+      "id": "track-5",
+      "name": "UI",
+      "path": "D:\\MusicStudioPro\\docs\\phase294-screenshots\\ui-missing\\absent.wav",
+      "gain": 1,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "clips": [
+        {
+          "id": "clip-12",
+          "sourceFileId": "track-5-src",
+          "timelineStart": 0,
+          "sourceOffset": 0,
+          "duration": 48000,
+          "fadeIn": 0,
+          "fadeOut": 0,
+          "gain": 1
+        }
+      ],
+      "extras": [],
+      "output": "master",
+      "sends": [],
+      "effects": [],
+      "automation": [],
+      "record": {
+        "armed": false,
+        "input": "1",
+        "mode": "dry",
+        "monitor": false
+      },
+      "takes": [],
+      "takesExpanded": false,
+      "compCrossfadeMs": 5,
+      "autoCrossfadeEnabled": false,
+      "autoCrossfadeMs": 20,
+      "autoCrossfadeCurve": "linear"
+    }
+  ],
+  "buses": [],
+  "masterEffects": [],
+  "masterAutomation": [],
+  "renderTail": {
+    "enabled": true,
+    "maxSeconds": 10,
+    "thresholdDb": -90
+  },
+  "pitchMapping": {
+    "enabled": false,
+    "root": "C",
+    "scale": "major",
+    "tieBreak": "lower",
+    "toleranceCents": 10
+  }
+}

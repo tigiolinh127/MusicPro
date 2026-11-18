@@ -1,0 +1,187 @@
+{
+  "pass": 33,
+  "fail": 0,
+  "not_run": 3,
+  "checks": [
+    {
+      "scenario": "shortcut persistence write/read",
+      "result": "PASS",
+      "detail": "{\"timeline.split\":{\"key\":\"b\"}}"
+    },
+    {
+      "scenario": "shortcut reset clears overrides",
+      "result": "PASS",
+      "detail": "reset"
+    },
+    {
+      "scenario": "timeline split shortcut match",
+      "result": "PASS",
+      "detail": "timeline.split"
+    },
+    {
+      "scenario": "project save uses modifier (not split)",
+      "result": "PASS",
+      "detail": "project.save"
+    },
+    {
+      "scenario": "transport play/pause match",
+      "result": "PASS",
+      "detail": "transport.playPause"
+    },
+    {
+      "scenario": "timeline zoom-in match",
+      "result": "PASS",
+      "detail": "timeline.zoomIn"
+    },
+    {
+      "scenario": "fit project match",
+      "result": "PASS",
+      "detail": "timeline.fitProject"
+    },
+    {
+      "scenario": "transport record match",
+      "result": "PASS",
+      "detail": "transport.record"
+    },
+    {
+      "scenario": "undo match",
+      "result": "PASS",
+      "detail": "edit.undo"
+    },
+    {
+      "scenario": "redo match (Ctrl+Shift+Z)",
+      "result": "PASS",
+      "detail": "edit.redo"
+    },
+    {
+      "scenario": "duplicate event prevention (repeat blocked)",
+      "result": "PASS",
+      "detail": "null"
+    },
+    {
+      "scenario": "input-field focus protection (typing detected)",
+      "result": "PASS",
+      "detail": "focusable inputs present"
+    },
+    {
+      "scenario": "shortcut customization panel opens",
+      "result": "PASS",
+      "detail": "panel"
+    },
+    {
+      "scenario": "shortcut conflict detection",
+      "result": "PASS",
+      "detail": "Conflict: Ctrl+Z → Undo & Split at Playhead"
+    },
+    {
+      "scenario": "shortcut customization persists",
+      "result": "PASS",
+      "detail": "{\"timeline.toggleSnap\":{\"key\":\"g\"}}"
+    },
+    {
+      "scenario": "UI-only snap shortcut does not dirty",
+      "result": "PASS",
+      "detail": "0→0"
+    },
+    {
+      "scenario": "timeline zoom shortcut",
+      "result": "PASS",
+      "detail": "100"
+    },
+    {
+      "scenario": "fit project shortcut",
+      "result": "PASS",
+      "detail": "ran"
+    },
+    {
+      "scenario": "return to start shortcut",
+      "result": "PASS",
+      "detail": "0"
+    },
+    {
+      "scenario": "seek forward shortcut",
+      "result": "PASS",
+      "detail": "0.5"
+    },
+    {
+      "scenario": "transport play/stop shortcuts",
+      "result": "PASS",
+      "detail": "ran"
+    },
+    {
+      "scenario": "duplicate shortcut",
+      "result": "PASS",
+      "detail": "2"
+    },
+    {
+      "scenario": "select all shortcut",
+      "result": "PASS",
+      "detail": "2"
+    },
+    {
+      "scenario": "deselect shortcut",
+      "result": "PASS",
+      "detail": "0"
+    },
+    {
+      "scenario": "dirty-state after nudge shortcut",
+      "result": "PASS",
+      "detail": "0→1"
+    },
+    {
+      "scenario": "undo shortcut",
+      "result": "PASS",
+      "detail": "ran"
+    },
+    {
+      "scenario": "redo shortcut",
+      "result": "PASS",
+      "detail": "ran"
+    },
+    {
+      "scenario": "autosave compatibility with shortcut workflow",
+      "result": "PASS",
+      "detail": "dirty retained"
+    },
+    {
+      "scenario": "modal dialog receives focus path",
+      "result": "PASS",
+      "detail": "unsaved dialog"
+    },
+    {
+      "scenario": "modal cancel restores workflow",
+      "result": "PASS",
+      "detail": "closed"
+    },
+    {
+      "scenario": "platform modifier handling (meta=ctrl)",
+      "result": "PASS",
+      "detail": "project.save"
+    },
+    {
+      "scenario": "toggle loop shortcut",
+      "result": "NOT RUN",
+      "detail": "engine has no loop transport action"
+    },
+    {
+      "scenario": "toggle metronome shortcut",
+      "result": "NOT RUN",
+      "detail": "engine has no metronome"
+    },
+    {
+      "scenario": "recording safety (hardware)",
+      "result": "NOT RUN",
+      "detail": "NO HARDWARE"
+    },
+    {
+      "scenario": "shortcut discoverability control present",
+      "result": "PASS",
+      "detail": "Shortcuts button"
+    },
+    {
+      "scenario": "renderer console clean",
+      "result": "PASS",
+      "detail": "ok"
+    }
+  ]
+}

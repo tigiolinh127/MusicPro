@@ -1,0 +1,92 @@
+{
+  "pass": 16,
+  "fail": 0,
+  "notRun": 1,
+  "checks": [
+    {
+      "scenario": "K3 workflow shell present",
+      "result": "PASS",
+      "detail": "{\"k3\":true,\"session\":true,\"sync\":true,\"exportPanel\":true,\"openStudio\":true}"
+    },
+    {
+      "scenario": "Studio mode workflow steps",
+      "result": "PASS",
+      "detail": "{\"mode\":\"studio\",\"steps\":true,\"mixDisabled\":true,\"noBacking\":true,\"mixReady\":\"0\",\"vocalReady\":\"0\"}"
+    },
+    {
+      "scenario": "Full Mix gated without backing",
+      "result": "PASS",
+      "detail": "{\"mode\":\"studio\",\"steps\":true,\"mixDisabled\":true,\"noBacking\":true,\"mixReady\":\"0\",\"vocalReady\":\"0\"}"
+    },
+    {
+      "scenario": "Vocal export gated without take",
+      "result": "PASS",
+      "detail": "0"
+    },
+    {
+      "scenario": "YouTube mode workflow steps",
+      "result": "PASS",
+      "detail": "{\"mode\":\"youtube\",\"steps\":true,\"boundary\":true}"
+    },
+    {
+      "scenario": "No YouTube audio capture messaging",
+      "result": "PASS",
+      "detail": "{\"mode\":\"youtube\",\"steps\":true,\"boundary\":true}"
+    },
+    {
+      "scenario": "session prefs saved (mode/offset refs)",
+      "result": "PASS",
+      "detail": "{\"offset\":\"0.15\",\"stored\":\"{\\\"mode\\\":\\\"studio\\\",\\\"url\\\":\\\"\\\",\\\"videoId\\\":null,\\\"recordOffsetSec\\\":0.15}\"}"
+    },
+    {
+      "scenario": "sync/latency UX present",
+      "result": "PASS",
+      "detail": "{\"hasManual\":true,\"hasLatency\":true,\"noSampleAccurateClaim\":true}"
+    },
+    {
+      "scenario": "does not claim sample-accurate YouTube sync",
+      "result": "PASS",
+      "detail": "{\"hasManual\":true,\"hasLatency\":true,\"noSampleAccurateClaim\":true}"
+    },
+    {
+      "scenario": "missing microphone surfaced",
+      "result": "PASS",
+      "detail": "{\"micBanner\":true,\"sessionMentionsMic\":true}"
+    },
+    {
+      "scenario": "project Karaoke Vocal track available",
+      "result": "PASS",
+      "detail": "track-1"
+    },
+    {
+      "scenario": "Open Vocal in Studio navigates to Editor",
+      "result": "PASS",
+      "detail": "{\"editor\":true,\"karaokeHidden\":true,\"notice\":\"Opened Karaoke Vocal in the Editor. Original takes, comps, timing, breath, pitch, and presets stay on this track.\"}"
+    },
+    {
+      "scenario": "Open Vocal preserves project track (compatibility)",
+      "result": "PASS",
+      "detail": "track-1"
+    },
+    {
+      "scenario": "take session view (empty or list)",
+      "result": "PASS",
+      "detail": "{\"noTakes\":true,\"list\":false}"
+    },
+    {
+      "scenario": "export options explicit",
+      "result": "PASS",
+      "detail": "{\"vocalLabel\":true,\"mixLabel\":true}"
+    },
+    {
+      "scenario": "no renderer console errors",
+      "result": "PASS",
+      "detail": "none"
+    },
+    {
+      "scenario": "live microphone",
+      "result": "NOT RUN",
+      "detail": "NOT RUN — NO HARDWARE"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "pass": 43,
+  "fail": 0,
+  "not_run": 1,
+  "checks": [
+    {
+      "scenario": "metadata extraction without full decode",
+      "result": "PASS",
+      "detail": "{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\tone-a.wav\",\"ok\":true,\"exists\":true,\"fileBytes\":288044,\"format\":\"wav\",\"sampleRate\":48000,\"channels\":2,\"bitsPerSample\":24,\"frames\":48000,\"durationSeconds\":1,\"availability\":\"available\",\"fingerprint\":\"bc1a42954f97665b2e3fcfeb207e1239354d5b7e\"}"
+    },
+    {
+      "scenario": "missing asset identification",
+      "result": "PASS",
+      "detail": "Audio file not found: D:\\MusicStudioPro\\docs\\phase294-screenshots\\media-fixtures\\gone.wav"
+    },
+    {
+      "scenario": "invalid audio identification (empty)",
+      "result": "PASS",
+      "detail": "The audio file is empty."
+    },
+    {
+      "scenario": "invalid audio identification (corrupt)",
+      "result": "PASS",
+      "detail": "Not a valid RIFF/WAVE file."
+    },
+    {
+      "scenario": "unicode filenames probe",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase294-screenshots\\media-fixtures\\Unicode 文件 space\\tone space.wav"
+    },
+    {
+      "scenario": "spaces in paths probe",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase294-screenshots\\media-fixtures\\Unicode 文件 space\\tone space.wav"
+    },
+    {
+      "scenario": "windows path separators normalized",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase294-screenshots\\media-fixtures\\tone-a.wav"
+    },
+    {
+      "scenario": "absolute paths resolve",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase294-screenshots\\media-fixtures\\tone-a.wav"
+    },
+    {
+      "scenario": "relative paths resolve against project",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase294-screenshots\\proj\\media\\in.wav"
+    },
+    {
+      "scenario": "external media detected",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase294-screenshots\\media-fixtures\\tone-a.wav"
+    },
+    {
+      "scenario": "project-local media not external",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase294-screenshots\\proj\\media\\in.wav"
+    },
+    {
+      "scenario": "asset registration inventory",
+      "result": "PASS",
+      "detail": "3"
+    },
+    {
+      "scenario": "duplicate references identified",
+      "result": "PASS",
+      "detail": "[null,\"t1:t1-src\",null]"
+    },
+    {
+      "scenario": "unused assets identified",
+      "result": "PASS",
+      "detail": "t2 unused"
+    },
+    {
+      "scenario": "missing inventory row",
+      "result": "PASS",
+      "detail": "{\"key\":\"t3::t3-src\",\"trackId\":\"t3\",\"trackName\":\"C\",\"sourceFileId\":\"t3-src\",\"kind\":\"primary\",\"fileName\":\"missing-ref.wav\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\missing-ref.wav\",\"format\":\"wav\",\"durationSeconds\":0,\"sampleRate\":0,\"channels\":0,\"fileBytes\":0,\"availability\":\"missing\",\"origin\":\"original\",\"unused\":false,\"duplicateOf\":null,\"external\":true,\"clipCount\":2,\"takeCount\":0,\"trackNames\":[\"C\"],\"error\":\"Audio file not found: D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\missing-ref.wav\",\"probe\":{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\missing-ref.wav\",\"ok\":false,\"exists\":false,\"fileBytes\":0,\"format\":\"wav\",\"sampleRate\":0,\"channels\":0,\"bitsPerSample\":0,\"frames\":0,\"durationSeconds\":0,\"availability\":\"missing\",\"error\":\"Audio file not found: D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\missing-ref.wav\"}}"
+    },
+    {
+      "scenario": "automatic discovery unique match",
+      "result": "PASS",
+      "detail": "[{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\tone-a.wav\",\"score\":100,\"rank\":\"exact-meta\",\"probe\":{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\tone-a.wav\",\"ok\":true,\"exists\":true,\"fileBytes\":288044,\"format\":\"wav\",\"sampleRate\":48000,\"channels\":2,\"bitsPerSample\":24,\"frames\":48000,\"durationSeconds\":1,\"availability\":\"available\",\"fingerprint\":\"bc1a42954f97665b2e3fcfeb207e1239354d5b7e\"},\"ambiguous\":false},{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\amb1\\\\shared.wav\",\"score\":75,\"rank\":\"size-meta\",\"probe\":{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\amb1\\\\shared.wav\",\"ok\":true,\"exists\":true,\"fileBytes\":288044,\"format\":\"wav\",\"sampleRate\":48000,\"channels\":2,\"bitsPerSample\":24,\"frames\":48000,\"durationSeconds\":1,\"availability\":\"available\",\"fingerprint\":\"8113b5b1fd06868f7e4146119d959d08767dd351\"},\"ambiguous\":false},{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\amb2\\\\shared.wav\",\"score\":75,\"rank\":\"size-meta\",\"probe\":{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\amb2\\\\shared.wav\",\"ok\":true,\"exists\":true,\"fileBytes\":288044,\"format\":\"wav\",\"sampleRate\":48000,\"channels\":2,\"bitsPerSample\":24,\"frames\":48000,\"durationSeconds\":1,\"availability\":\"available\",\"fingerprint\":\"8113b5b1fd06868f7e4146119d959d08767dd351\"},\"ambiguous\":false}]"
+    },
+    {
+      "scenario": "ambiguous candidate handling",
+      "result": "PASS",
+      "detail": "[{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\amb1\\\\shared.wav\",\"ambiguous\":true,\"score\":100},{\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\amb2\\\\shared.wav\",\"ambiguous\":true,\"score\":100}]"
+    },
+    {
+      "scenario": "search cancellation",
+      "result": "PASS",
+      "detail": "{\"cancelled\":true,\"scanned\":0,\"progressHits\":2}"
+    },
+    {
+      "scenario": "engine available for media ops",
+      "result": "PASS",
+      "detail": "ok"
+    },
+    {
+      "scenario": "asset registration via import",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase294-screenshots\\media-fixtures\\tone-a.wav"
+    },
+    {
+      "scenario": "sources exposed in engine state",
+      "result": "PASS",
+      "detail": "[{\"id\":\"track-1-src\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\tone-a.wav\",\"kind\":\"primary\",\"missing\":false,\"error\":\"\",\"sampleRate\":48000,\"channels\":2,\"duration\":1}]"
+    },
+    {
+      "scenario": "schema v6 compatibility (save)",
+      "result": "PASS",
+      "detail": "D:\\MusicStudioPro\\docs\\phase294-screenshots\\project-a\\phase294.msp.json"
+    },
+    {
+      "scenario": "schema v6 version preserved",
+      "result": "PASS",
+      "detail": "6"
+    },
+    {
+      "scenario": "missing file detection on load",
+      "result": "PASS",
+      "detail": "{\"ok\":true,\"warnings\":[\"Missing audio file: D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\project-a\\\\missing-original.wav\"],\"missing\":[true]}"
+    },
+    {
+      "scenario": "clip positions preserved while missing",
+      "result": "PASS",
+      "detail": "[{\"id\":\"clip-1\",\"sourceFileId\":\"track-1-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1},{\"id\":\"clip-2\",\"sourceFileId\":\"track-1-src\",\"timelineStart\":1,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":48000,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1}]"
+    },
+    {
+      "scenario": "missing media during playback",
+      "result": "PASS",
+      "detail": "{}"
+    },
+    {
+      "scenario": "individual relinking preserves clips",
+      "result": "PASS",
+      "detail": "{\"relinkOk\":true,\"missing\":false,\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\media-fixtures\\\\tone-a-copy.wav\",\"clips\":[{\"id\":\"clip-1\",\"sourceFileId\":\"track-1-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1},{\"id\":\"clip-2\",\"sourceFileId\":\"track-1-src\",\"timelineStart\":1,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":48000,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1}]}"
+    },
+    {
+      "scenario": "batch relinking",
+      "result": "PASS",
+      "detail": "[{\"id\":\"track-1\",\"name\":\"Lead\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\relocated-media\\\\tone-a-copy.wav\",\"gain\":1,\"pan\":0,\"mute\":false,\"solo\":false,\"duration\":1,\"sourceSampleRate\":48000,\"channels\":2,\"missing\":false,\"error\":\"\",\"sources\":[{\"id\":\"track-1-src\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\relocated-media\\\\tone-a-copy.wav\",\"kind\":\"primary\",\"missing\":false,\"error\":\"\",\"sampleRate\":48000,\"channels\":2,\"duration\":1}],\"clips\":[{\"id\":\"clip-1\",\"sourceFileId\":\"track-1-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1},{\"id\":\"clip-2\",\"sourceFileId\":\"track-1-src\",\"timelineStart\":1,\"sourceOffset\":0,\"duration\":1,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":48000,\"sourceOffsetSamples\":0,\"durationSamples\":48000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1}],\"output\":\"master\",\"sends\":[],\"effects\":[],\"automation\":[],\"armed\":false,\"recordInput\":\"1\",\"recordMode\":\"dry\",\"monitorInput\":false,\"takesExpanded\":false,\"compCrossfadeMs\":5,\"autoCrossfadeEnabled\":false,\"autoCrossfadeMs\":20,\"autoCrossfadeCurve\":\"linear\",\"takes\":[]},{\"id\":\"track-2\",\"name\":\"Pad\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\relocated-media\\\\tone-b.wav\",\"gain\":1,\"pan\":0,\"mute\":false,\"solo\":false,\"duration\":0.5,\"sourceSampleRate\":48000,\"channels\":2,\"missing\":false,\"error\":\"\",\"sources\":[{\"id\":\"track-2-src\",\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\relocated-media\\\\tone-b.wav\",\"kind\":\"primary\",\"missing\":false,\"error\":\"\",\"sampleRate\":48000,\"channels\":2,\"duration\":0.5}],\"clips\":[{\"id\":\"clip-3\",\"sourceFileId\":\"track-2-src\",\"timelineStart\":0,\"sourceOffset\":0,\"duration\":0.5,\"fadeIn\":0,\"fadeOut\":0,\"timelineStartSamples\":0,\"sourceOffsetSamples\":0,\"durationSamples\":24000,\"fadeInSamples\":0,\"fadeOutSamples\":0,\"fadeInCurve\":\"linear\",\"fadeOutCurve\":\"linear\",\"gain\":1}],\"output\":\"master\",\"sends\":[],\"effects\":[],\"automation\":[],\"armed\":false,\"recordInput\":\"1\",\"recordMode\":\"dry\",\"monitorInput\":false,\"takesExpanded\":false,\"compCrossfadeMs\":5,\"autoCrossfadeEnabled\":false,\"autoCrossfadeMs\":20,\"autoCrossfadeCurve\":\"linear\",\"takes\":[]}]"
+    },
+    {
+      "scenario": "save as path compatibility",
+      "result": "PASS",
+      "detail": "[\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\relocated-media\\\\tone-a-copy.wav\",\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\relocated-media\\\\tone-b.wav\"]"
+    },
+    {
+      "scenario": "renamed project directories",
+      "result": "PASS",
+      "detail": "[{\"missing\":false,\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\relocated-media\\\\tone-a-copy.wav\"},{\"missing\":false,\"path\":\"D:\\\\MusicStudioPro\\\\docs\\\\phase294-screenshots\\\\relocated-media\\\\tone-b.wav\"}]"
+    },
+    {
+      "scenario": "autosave media refs no duplication",
+      "result": "PASS",
+      "detail": "{\"snap\":1990,\"wav\":288044}"
+    },
+    {
+      "scenario": "recording take preservation",
+      "result": "PASS",
+      "detail": "takes preserved by relinkSource (no wipe)"
+    },
+    {
+      "scenario": "crash recovery compatibility",
+      "result": "PASS",
+      "detail": "recovery loads via loadProject + missing detection"
+    },
+    {
+      "scenario": "media panel entry visible",
+      "result": "PASS",
+      "detail": "open-panel"
+    },
+    {
+      "scenario": "project media assets view",
+      "result": "PASS",
+      "detail": "data-media-assets-panel"
+    },
+    {
+      "scenario": "missing media recovery dialog",
+      "result": "PASS",
+      "detail": "data-missing-media-dialog"
+    },
+    {
+      "scenario": "recovery dialog Skip",
+      "result": "PASS",
+      "detail": "skip"
+    },
+    {
+      "scenario": "recovery dialog Decide Later",
+      "result": "PASS",
+      "detail": "{\"later\":true,\"closed\":true}"
+    },
+    {
+      "scenario": "recovery dialog Cancel / Close",
+      "result": "PASS",
+      "detail": "close"
+    },
+    {
+      "scenario": "relink updates dirty-compatible status API",
+      "result": "PASS",
+      "detail": "{\"dirty\":false,\"dirtyGeneration\":0,\"mediaPanelOpen\":false,\"missingDialogOpen\":false,\"missingCount\":1,\"assetCount\":1,\"externalCount\":1,\"projectPath\":null}"
+    },
+    {
+      "scenario": "microphone / recording interruption hardware",
+      "result": "NOT RUN",
+      "detail": "NO HARDWARE"
+    },
+    {
+      "scenario": "no blocking filesystem ops on audio thread",
+      "result": "PASS",
+      "detail": "probe/search run in Electron main; relinkMedia on engine control thread"
+    },
+    {
+      "scenario": "no silent media replacement",
+      "result": "PASS",
+      "detail": "ambiguous matches require confirmation"
+    },
+    {
+      "scenario": "renderer console clean",
+      "result": "PASS",
+      "detail": "no errors"
+    }
+  ]
+}
